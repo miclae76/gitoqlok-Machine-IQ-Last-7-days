@@ -1,28 +1,26 @@
 {
   "qInfo": {
-    "qId": "psSRAj",
+    "qId": "pVmPFWB",
     "qType": "dimension"
   },
   "qDim": {
     "qGrouping": "N",
     "qFieldDefs": [
-      "data_partition"
+      "cellular_protocol"
     ],
     "qFieldLabels": [
-      "Data Partition"
+      "Cellular Protocol"
     ],
-    "title": "Data Partition",
+    "title": "Cellular Protocol",
     "coloring": {
-      "changeHash": "0.9248405575960177",
+      "changeHash": "0.47822284562947326",
       "hasValueColors": false,
-      "colorMapRef": "psSRAj"
+      "colorMapRef": "pVmPFWB"
     }
   },
   "qMetaDef": {
-    "title": "Data Partition",
+    "title": "Cellular Protocol",
     "description": "",
-    "tags": [
-      "esn"
-    ]
+    "tags": []
   }
 }

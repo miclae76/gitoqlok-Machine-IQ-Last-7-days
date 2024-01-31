@@ -1,9 +1,12 @@
 ///$tab 30_Equipment_Locations
+TRACE *** Load iot_debounced_location_sessions ***;
+
 [iot_debounced_location_sessions]:
 LOAD * where "last_update_ts" = last_ts_location;
 LOAD *,
 	window(max("last_update_ts"), asset_id) AS last_ts_location;
-SELECT "location_id",
+SELECT 
+	"location_id",
 	"asset_id",
 	"start_ts",
 	--"start_event_id" ,

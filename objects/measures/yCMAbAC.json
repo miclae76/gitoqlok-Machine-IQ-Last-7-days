@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "yCMAbAC",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "DEF Level",
+    "qDef": "Only({<sample_ts={\"$(=Max(sample_ts))\"}>} def_level)/100",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "DEF Level",
+    "description": "",
+    "tags": []
+  }
+}

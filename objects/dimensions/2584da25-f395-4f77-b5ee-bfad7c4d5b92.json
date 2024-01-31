@@ -1,0 +1,27 @@
+{
+  "qInfo": {
+    "qId": "2584da25-f395-4f77-b5ee-bfad7c4d5b92",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "fault_name"
+    ],
+    "qFieldLabels": [
+      "Fault Name"
+    ],
+    "qLabelExpression": "='Name'",
+    "title": "Fault Name",
+    "coloring": {
+      "colorMapRef": "2584da25-f395-4f77-b5ee-bfad7c4d5b92",
+      "changeHash": "0.43118574889502814",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Fault Name",
+    "description": "",
+    "tags": []
+  }
+}

@@ -9,17 +9,17 @@
       "=health_status"
     ],
     "qFieldLabels": [
-      "health_status"
+      "Health status"
     ],
-    "title": "health_status",
+    "title": "Health status",
     "coloring": {
-      "changeHash": "0.72425170214962",
+      "changeHash": "0.5984644852777661",
       "hasValueColors": true,
       "colorMapRef": "kRBrEz"
     }
   },
   "qMetaDef": {
-    "title": "health_status",
+    "title": "Health status",
     "description": "",
     "tags": []
   },

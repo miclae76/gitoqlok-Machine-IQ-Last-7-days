@@ -9,17 +9,17 @@
       "service_status"
     ],
     "qFieldLabels": [
-      "service_status"
+      "Service status"
     ],
-    "title": "service_status",
+    "title": "Service status",
     "coloring": {
-      "changeHash": "0.890471254815066",
+      "changeHash": "0.6343830432724662",
       "hasValueColors": true,
       "colorMapRef": "00e57f47-c28f-4ab8-bb36-96f1fab5a791"
     }
   },
   "qMetaDef": {
-    "title": "service_status",
+    "title": "Service status",
     "description": "",
     "tags": []
   },

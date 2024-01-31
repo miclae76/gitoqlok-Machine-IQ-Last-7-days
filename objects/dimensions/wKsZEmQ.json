@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "wKsZEmQ",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=ConvertToLocalTime(equipment_last_update_ts, TimeZone)"
+    ],
+    "qFieldLabels": [
+      "Equipment Last Update TS"
+    ],
+    "qLabelExpression": "='Last update TS'",
+    "title": "Equipment Last Update TS",
+    "coloring": {
+      "changeHash": "0.7687421038586917",
+      "hasValueColors": false,
+      "colorMapRef": "wKsZEmQ"
+    }
+  },
+  "qMetaDef": {
+    "title": "Equipment Last Update TS",
+    "description": "Equipement Status Last update TS",
+    "tags": [
+      "timestamp"
+    ]
+  }
+}

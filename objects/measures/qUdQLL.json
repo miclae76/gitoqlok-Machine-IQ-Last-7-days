@@ -1,0 +1,55 @@
+{
+  "qInfo": {
+    "qId": "qUdQLL",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Fuel Level",
+    "qDef": "Only({<sample_ts={\"$(=Max(sample_ts))\"}>} fuel_level)/100",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "gradient": {
+        "colors": [
+          {
+            "color": "#FF3333",
+            "index": -1
+          },
+          {
+            "color": "#F9D83A",
+            "index": -1
+          },
+          {
+            "color": "#33FF33",
+            "index": -1
+          }
+        ],
+        "breakTypes": [
+          false,
+          false
+        ],
+        "limits": [
+          0.3,
+          0.7
+        ],
+        "limitType": "absolute"
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "Fuel Level",
+    "description": "",
+    "tags": []
+  }
+}

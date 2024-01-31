@@ -1,0 +1,17 @@
+{
+  "qInfo": {
+    "qId": "ffff10d0-71e2-41ed-b5cb-e2566a6af02b",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "c.Warning",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "RGB(249,216,58)",
+  "tags": [
+    "color"
+  ]
+}

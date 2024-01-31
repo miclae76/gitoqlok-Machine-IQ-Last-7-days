@@ -300,6 +300,62 @@
               }
             },
             {
+              "qLibraryId": "DbYJv",
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [],
+                "qFieldLabels": [],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "othersLabel": "Others",
+                "autoSort": true,
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "columnWidth": {
+                  "type": "pixels",
+                  "pixels": 200.1675,
+                  "percentage": 20
+                },
+                "cId": "FnJgYqG"
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            },
+            {
               "qLibraryId": "usASJMn",
               "qDef": {
                 "qGrouping": "N",
@@ -382,8 +438,8 @@
                   "align": "left"
                 },
                 "columnWidth": {
-                  "type": "auto",
-                  "pixels": 200,
+                  "type": "pixels",
+                  "pixels": 156.1675,
                   "percentage": 20
                 },
                 "cId": "ypFjtRJ"
@@ -416,14 +472,11 @@
               }
             },
             {
+              "qLibraryId": "64bcc4a7-c903-4579-9ea9-19997321a26c",
               "qDef": {
                 "qGrouping": "N",
-                "qFieldDefs": [
-                  "subscription_status"
-                ],
-                "qFieldLabels": [
-                  ""
-                ],
+                "qFieldDefs": [],
+                "qFieldLabels": [],
                 "qSortCriterias": [
                   {
                     "qSortByNumeric": 1,
@@ -442,10 +495,10 @@
                 },
                 "columnWidth": {
                   "type": "pixels",
-                  "pixels": 178.99603174603175,
+                  "pixels": 170.1861111111111,
                   "percentage": 20
                 },
-                "cId": "YfGu"
+                "cId": "npTUCHw"
               },
               "qOtherTotalSpec": {
                 "qOtherMode": "OTHER_OFF",
@@ -652,14 +705,11 @@
               }
             },
             {
+              "qLibraryId": "wKsZEmQ",
               "qDef": {
                 "qGrouping": "N",
-                "qFieldDefs": [
-                  "Last_updated"
-                ],
-                "qFieldLabels": [
-                  "Last_updated"
-                ],
+                "qFieldDefs": [],
+                "qFieldLabels": [],
                 "qSortCriterias": [
                   {
                     "qSortByNumeric": 1,
@@ -669,7 +719,6 @@
                   }
                 ],
                 "qNumberPresentations": [],
-                "qReverseSort": true,
                 "qActiveField": 0,
                 "othersLabel": "Others",
                 "autoSort": true,
@@ -682,7 +731,7 @@
                   "pixels": 200,
                   "percentage": 20
                 },
-                "cId": "PptxjNE"
+                "cId": "PcBNEy"
               },
               "qOtherTotalSpec": {
                 "qOtherMode": "OTHER_OFF",
@@ -827,16 +876,17 @@
           "qMeasures": [],
           "qInterColumnSortOrder": [
             0,
-            8,
-            3,
-            1,
-            2,
+            9,
             4,
+            1,
+            3,
             5,
             6,
             7,
-            9,
-            10
+            8,
+            10,
+            11,
+            2
           ],
           "qInitialDataFetch": [
             {
@@ -868,7 +918,8 @@
             7,
             8,
             9,
-            10
+            10,
+            11
           ],
           "qExpansionState": [],
           "qDynamicScript": [],

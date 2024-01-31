@@ -1,0 +1,17 @@
+{
+  "qInfo": {
+    "qId": "ebcc0760-8a7a-49af-8bc9-e5d61a13bbbb",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "c.Green",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "RGB(51,255,51)",
+  "tags": [
+    "color"
+  ]
+}

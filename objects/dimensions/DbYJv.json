@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "DbYJv",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=date(floor(ConvertToLocalTime(first_association_ts, TimeZone)), 'MMM d, YYYY')"
+    ],
+    "qFieldLabels": [
+      "First association TS"
+    ],
+    "title": "First association TS",
+    "coloring": {
+      "changeHash": "0.5669224225274703",
+      "hasValueColors": false,
+      "colorMapRef": "DbYJv"
+    }
+  },
+  "qMetaDef": {
+    "title": "First association TS",
+    "description": "",
+    "tags": [
+      "esn"
+    ]
+  }
+}

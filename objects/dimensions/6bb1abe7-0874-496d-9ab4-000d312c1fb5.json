@@ -1,0 +1,27 @@
+{
+  "qInfo": {
+    "qId": "6bb1abe7-0874-496d-9ab4-000d312c1fb5",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "severity"
+    ],
+    "qFieldLabels": [
+      "Fault Severity"
+    ],
+    "qLabelExpression": "='Severity'",
+    "title": "Fault Severity",
+    "coloring": {
+      "colorMapRef": "pVmPFWB",
+      "changeHash": "0.7686328158991504",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Fault Severity",
+    "description": "",
+    "tags": []
+  }
+}

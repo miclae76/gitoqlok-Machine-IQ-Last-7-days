@@ -1,0 +1,27 @@
+{
+  "qInfo": {
+    "qId": "eaf10a00-e2fc-4e2d-8807-a9a416a35d6b",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "status"
+    ],
+    "qFieldLabels": [
+      "Fault Status"
+    ],
+    "qLabelExpression": "='Status'",
+    "title": "Fault Status",
+    "coloring": {
+      "colorMapRef": "pVmPFWB",
+      "changeHash": "0.3319536033879993",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Fault Status",
+    "description": "",
+    "tags": []
+  }
+}

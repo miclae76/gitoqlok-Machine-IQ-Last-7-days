@@ -1,25 +1,5 @@
 [
   {
-    "qName": "DaysSinceLastStatus",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "iot_equipment_status"
-    ]
-  },
-  {
-    "qName": "Last_updated",
-    "qTags": [
-      "$numeric",
-      "$timestamp"
-    ],
-    "qSrcTables": [
-      "iot_equipment_status"
-    ]
-  },
-  {
     "qName": "TimeScope",
     "qTags": [
       "$ascii",
@@ -114,16 +94,6 @@
     ],
     "qSrcTables": [
       "iot_debounced_location_sessions"
-    ]
-  },
-  {
-    "qName": "created",
-    "qTags": [
-      "$numeric",
-      "$timestamp"
-    ],
-    "qSrcTables": [
-      "Devise_Association_History"
     ]
   },
   {
@@ -238,10 +208,30 @@
     ]
   },
   {
+    "qName": "equipment_last_update_ts",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_equipment_status"
+    ]
+  },
+  {
     "qName": "esn",
     "qTags": [
       "$ascii",
       "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "esn_created",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
     ],
     "qSrcTables": [
       "Devise_Association_History"
@@ -290,9 +280,7 @@
     "qName": "first_association_ts",
     "qTags": [
       "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date"
+      "$timestamp"
     ],
     "qSrcTables": [
       "Devise_Association_History"
@@ -400,9 +388,7 @@
     "qName": "last_association_ts",
     "qTags": [
       "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date"
+      "$timestamp"
     ],
     "qSrcTables": [
       "Devise_Association_History"
@@ -676,26 +662,6 @@
     ],
     "qSrcTables": [
       "Devise_Association_History"
-    ]
-  },
-  {
-    "qName": "sync_failed",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "iot_equipment"
-    ]
-  },
-  {
-    "qName": "sync_retry",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "iot_equipment"
     ]
   },
   {

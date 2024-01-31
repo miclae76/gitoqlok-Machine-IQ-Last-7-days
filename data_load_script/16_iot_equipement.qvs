@@ -1,8 +1,9 @@
 ///$tab 16_iot_equipement
-LIB CONNECT TO 'Common DATA:Machine IQ';
+TRACE *** Load iot_equipment ***;
 
 [iot_equipment]:
-LOAD asset_id, 
+LOAD 
+	asset_id, 
 	servicing_dealer_id, 
 	product_category, 
 	product_model, 
@@ -10,12 +11,11 @@ LOAD asset_id,
 	product_equipment_type, 
 	test_machine, 
 	inventory_condition, 
-	ConvertToLocalTime("last_sync_time", '$(v_TimeZone)') AS "last_sync_time" , 
-	sync_retry, 
-	sync_failed, 
+	last_sync_time,
 	inventory_type, 
 	customer_account_id;
-SELECT "asset_id",
+SELECT 
+	"asset_id",
 	name,
 --	"data_partition",
 	"servicing_dealer_id",
@@ -29,24 +29,27 @@ SELECT "asset_id",
 --	deleted,
 	"inventory_condition",
 	"last_sync_time",
-	"sync_retry",
-	"sync_failed",
+--	"sync_retry",
+--	"sync_failed",
 	"inventory_type",
 	"customer_account_id"
 FROM iotv3."iot_equipment";
 
+
+TRACE *** Load iot_equipment status ***;
+
 [iot_equipment_status]:
-LOAD asset_id, 
-	 connected_status,
-     health_status,
+LOAD 
+	asset_id, 
+	connected_status,
+    health_status,
     service_status,
-	ConvertToLocalTime("Last_updated", '$(v_TimeZone)') AS "Last_updated" , 
-	Today() - floor(Last_updated) AS DaysSinceLastStatus
+	"Last_updated" as equipment_last_update_ts
     WHERE Last_updated = updated;
 LOAD 
 	asset_id,
     connected_status,
-   updated,
+    updated,
     health_status,
     service_status,
     Window(Max(updated),asset_id) AS Last_updated ;

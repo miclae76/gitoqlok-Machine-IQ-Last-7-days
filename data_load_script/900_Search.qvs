@@ -1,14 +1,25 @@
 ///$tab 900_Search
-Search Include 
+TRACE *** Setup Field list to include in Search ***;
+
+Search Include
+	asset_id,
+    esn,
+    data_partition,
 	municipality,
 	region,
-	"sub_region",
+	sub_region,
 	country,
-    asset_id,
-    esn,
-    "product_category",
-	"product_model",
-	"product_fault_category",
-	"product_equipment_type",
+    product_category,
+	product_model,
+	product_fault_category,
+	product_equipment_type,
+    inventory_type,
+    inventory_condition,
+    device_management,
+    cellular_protocol,
+    cellular_carrier,
+    device_type,
+    part_number,
+    fault_code_id,
     fault_name
-    ;
+;

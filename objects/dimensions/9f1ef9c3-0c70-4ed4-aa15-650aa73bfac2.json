@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "9f1ef9c3-0c70-4ed4-aa15-650aa73bfac2",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "product_category"
+    ],
+    "qFieldLabels": [
+      "Product category"
+    ],
+    "title": "Product category",
+    "coloring": {
+      "colorMapRef": "pVmPFWB",
+      "changeHash": "0.9153340266541243",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Product category",
+    "description": "",
+    "tags": []
+  }
+}

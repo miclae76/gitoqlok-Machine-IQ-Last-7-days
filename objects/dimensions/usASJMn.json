@@ -6,14 +6,14 @@
   "qDim": {
     "qGrouping": "N",
     "qFieldDefs": [
-      "=date(floor(last_association_ts), 'MMM D, YYYY')"
+      "=date(floor(ConvertToLocalTime(last_association_ts, TimeZone)), 'MMM d, YYYY')"
     ],
     "qFieldLabels": [
       "Last association TS"
     ],
     "title": "Last association TS",
     "coloring": {
-      "changeHash": "0.6790016343877456",
+      "changeHash": "0.9215085137946",
       "hasValueColors": false,
       "colorMapRef": "usASJMn"
     }

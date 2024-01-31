@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "EUDmnJJ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Last update from TCU",
+    "qDef": "date(ConvertToLocalTime(Max(sample_ts), TimeZone), 'MMM d, YYYY h:mmtt')",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {}
+  },
+  "qMetaDef": {
+    "title": "Last update from TCU",
+    "description": "",
+    "tags": []
+  }
+}

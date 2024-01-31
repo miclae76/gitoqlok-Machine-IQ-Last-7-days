@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "88c2210e-a072-4602-8b75-f297e2ca7fc4",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "product_equipment_type"
+    ],
+    "qFieldLabels": [
+      "Product equipement type"
+    ],
+    "title": "Product equipement type",
+    "coloring": {
+      "colorMapRef": "pVmPFWB",
+      "changeHash": "0.7468265529796878",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Product equipement type",
+    "description": "",
+    "tags": []
+  }
+}

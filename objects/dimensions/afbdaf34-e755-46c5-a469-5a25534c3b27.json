@@ -1,0 +1,27 @@
+{
+  "qInfo": {
+    "qId": "afbdaf34-e755-46c5-a469-5a25534c3b27",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=date(ConvertToLocalTime(fault_created, TimeZone, true()), 'MMM d, YYYY H:mmtt')"
+    ],
+    "qFieldLabels": [
+      "Fault Created TS"
+    ],
+    "qLabelExpression": "='Timestamp (' & TimeZone & ')'",
+    "title": "Fault Created TS",
+    "coloring": {
+      "colorMapRef": "afbdaf34-e755-46c5-a469-5a25534c3b27",
+      "changeHash": "0.7407090661658635",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Fault Created TS",
+    "description": "",
+    "tags": []
+  }
+}

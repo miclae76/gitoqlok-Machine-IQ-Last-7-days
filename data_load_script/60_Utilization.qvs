@@ -1,4 +1,6 @@
 ///$tab 60_Utilization
+TRACE *** iot_engine_hours_aggregation on last 7 days ***;
+
 [iot_engine_hours_aggregation]:
 LOAD 
 	*, 

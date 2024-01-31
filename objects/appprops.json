@@ -19,7 +19,7 @@
       },
       "sheetLogoPosition": "left",
       "rtl": false,
-      "theme": "horizon",
+      "theme": "card",
       "disableCellNavMenu": false,
       "chartAnimations": true,
       "presets": [

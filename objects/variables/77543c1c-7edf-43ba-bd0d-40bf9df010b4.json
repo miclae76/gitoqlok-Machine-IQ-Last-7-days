@@ -1,0 +1,17 @@
+{
+  "qInfo": {
+    "qId": "77543c1c-7edf-43ba-bd0d-40bf9df010b4",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "c.Alert",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "RGB(255,51,51)",
+  "tags": [
+    "color"
+  ]
+}

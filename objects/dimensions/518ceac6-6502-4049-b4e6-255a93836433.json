@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "518ceac6-6502-4049-b4e6-255a93836433",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "product_fault_category"
+    ],
+    "qFieldLabels": [
+      "Product fault category"
+    ],
+    "title": "Product fault category",
+    "coloring": {
+      "colorMapRef": "pVmPFWB",
+      "changeHash": "0.5757673674765047",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Product fault category",
+    "description": "",
+    "tags": []
+  }
+}

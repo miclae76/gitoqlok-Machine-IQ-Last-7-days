@@ -1,0 +1,27 @@
+{
+  "qInfo": {
+    "qId": "d5366c74-add9-41db-8ee1-65544ecef701",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "fault_code_id"
+    ],
+    "qFieldLabels": [
+      "Fault Code ID"
+    ],
+    "qLabelExpression": "='Code ID'",
+    "title": "Fault Code ID",
+    "coloring": {
+      "colorMapRef": "pVmPFWB",
+      "changeHash": "0.4130269956075614",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Fault Code ID",
+    "description": "",
+    "tags": []
+  }
+}

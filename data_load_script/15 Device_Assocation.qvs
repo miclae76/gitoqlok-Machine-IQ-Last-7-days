@@ -4,7 +4,7 @@ TRACE *** Load iot_things ***;
 Devise_Association_History:
 SELECT substring(iotv3.iot_things.name, 8, 10) AS esn,
 	   iotv3.iot_things.name,
-       iotv3.iot_things.created,
+       iotv3.iot_things.created as esn_created,
        iotv3.iot_things.subscription_status,
        iotv3.iot_things.version,
        iotv3.iot_things.data_partition,
@@ -21,7 +21,7 @@ SELECT substring(iotv3.iot_things.name, 8, 10) AS esn,
       -- last_equipment_association.sample_ts as last_association_ts
 from iotv3.iot_things;
 
-TRACE  *** Retrieve first and last equipment assocation ***;
+TRACE  *** Retrieve first and last equipment assocation from iot_messages ***;
 temp_equipment_association:
 SELECT 
 	asset_id, 
@@ -32,58 +32,13 @@ FROM iotv3.iot_messages
 GROUP BY asset_id, aws_thing_name
 ;
 
-TRACE *** Join results to Device table ****;
 LEFT JOIN (Devise_Association_History)
 LOAD 
   asset_id, 
   aws_thing_name as name, 
- // first_sample_ts AS first_association_ts,
- // last_sample_ts AS last_association_ts
   first_sample_ts	AS first_association_ts,
   last_sample_ts	AS last_association_ts
 RESIDENT temp_equipment_association
 ;
 
-
 drop Tables temp_equipment_association;
-
-/*
-Device_Association_History:
-
-
-SQL WITH 
- first_equipment_association AS
-  (WITH equipment_id_association AS 
-    (SELECT asset_id, aws_thing_name, sample_ts, ROW_NUMBER() OVER (PARTITION BY asset_id, aws_thing_name ORDER BY sample_ts ASC) rn
-    FROM iotv3.iot_messages)   
-  SELECT asset_id, aws_thing_name, sample_ts
-  FROM equipment_id_association
-  WHERE rn = 1),
-    last_equipment_association AS
-  (WITH last_equipment_id_association AS 
-    (SELECT asset_id, aws_thing_name, sample_ts, ROW_NUMBER() OVER (PARTITION BY asset_id, aws_thing_name ORDER BY sample_ts DESC) rn
-    FROM iotv3.iot_messages)   
-  SELECT asset_id, aws_thing_name, sample_ts
-  FROM last_equipment_id_association
-  WHERE rn = 1)
-SELECT iotv3.iot_things.name,
-       iotv3.iot_things.created,
-       iotv3.iot_things.subscription_status,
-       iotv3.iot_things.version,
-       iotv3.iot_things.data_partition,
-       iotv3.iot_things.imei,
-       iotv3.iot_things.imsi,
-       iotv3.iot_things.iccid,
-       iotv3.iot_things.device_management,
-       iotv3.iot_things.cellular_protocol,
-       iotv3.iot_things.cellular_carrier,
-       iotv3.iot_things.device_type,
-       iotv3.iot_things.part_number,
-       first_equipment_association.asset_id,
-       first_equipment_association.sample_ts as first_association_ts,   
-       last_equipment_association.sample_ts as last_association_ts
-from iotv3.iot_things
-  LEFT JOIN first_equipment_association ON iotv3.iot_things.name = first_equipment_association.aws_thing_name
-  left join last_equipment_association on (first_equipment_association.aws_thing_name = last_equipment_association.aws_thing_name) and (first_equipment_association.asset_id = last_equipment_association.asset_id)
-;
-*/

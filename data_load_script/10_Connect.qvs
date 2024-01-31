@@ -1,18 +1,7 @@
 ///$tab 10_Connect
-// IF '$(odagActive)'='' THEN
-// trace ODAG variables not inserted! Loading sample data.;
-// SET odags_asset_id = '''aljg30693''';
-// SET odag_TimeZone = '''UTC''';
-// END IF;
+TRACE *** Create static tables ***;
 
-// MyTempBindingData:
-// LOAD * INLINE [VAL
-// $(odags_asset_id){"quote": "", "delimiter": "\n"}
-// $(odago_TimeZone){"quote": "", "delimiter": "\n"}
-// ];
-
-
-
+//Static table to enable time zone selection for TS adjsuted 
 TimeZoneTable:
 LOAD * INLINE [
 TimeZone
@@ -26,6 +15,7 @@ UTC
 WET
 ];
 
+//Static table to select historical data for on-demand template app
 TimeScopeTable:
 LOAD * INLINE [
 TimeScope
@@ -39,5 +29,5 @@ Last Year
 Full History
 ];
 
-
+TRACE *** Connect to MIQ data ***;
 LIB CONNECT TO 'Common DATA:Machine IQ';
