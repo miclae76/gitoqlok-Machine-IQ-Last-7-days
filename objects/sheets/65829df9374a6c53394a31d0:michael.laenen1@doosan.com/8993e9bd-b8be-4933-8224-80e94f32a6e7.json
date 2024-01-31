@@ -1,0 +1,361 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "8993e9bd-b8be-4933-8224-80e94f32a6e7",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "Periodic Data",
+      "description": ""
+    },
+    "rank": null,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "columns": 24,
+    "rows": 17,
+    "cells": [
+      {
+        "name": "pRrkGAw",
+        "type": "container",
+        "col": 0,
+        "row": 0,
+        "colspan": 12,
+        "rowspan": 6,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 50,
+          "height": 35.294117647058826
+        }
+      },
+      {
+        "name": "PnpBKhz",
+        "type": "container",
+        "col": 12,
+        "row": 0,
+        "colspan": 12,
+        "rowspan": 6,
+        "bounds": {
+          "y": 0,
+          "x": 50,
+          "width": 50,
+          "height": 35.294117647058826
+        }
+      },
+      {
+        "name": "mNYBet",
+        "type": "container",
+        "col": 0,
+        "row": 6,
+        "colspan": 12,
+        "rowspan": 6,
+        "bounds": {
+          "y": 35.294117647058826,
+          "x": 0,
+          "width": 50,
+          "height": 35.294117647058826
+        }
+      },
+      {
+        "name": "QJrDW",
+        "type": "container",
+        "col": 12,
+        "row": 6,
+        "colspan": 12,
+        "rowspan": 6,
+        "bounds": {
+          "y": 35.294117647058826,
+          "x": 50,
+          "width": 50,
+          "height": 35.294117647058826
+        }
+      },
+      {
+        "name": "mEJKn",
+        "type": "container",
+        "col": 0,
+        "row": 12,
+        "colspan": 24,
+        "rowspan": 5,
+        "bounds": {
+          "y": 70.58823529411765,
+          "x": 0,
+          "width": 100,
+          "height": 29.411764705882355
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "gridMode": "edit",
+    "gridResolution": "small",
+    "labelExpression": {
+      "qStringExpression": {
+        "qExpr": "='Periodic Data ('&Date(Floor(Min(sample_ts)))& ' - '&Date(Floor(max(sample_ts))) &')'&' - ESN# ' &only(esn)"
+      }
+    },
+    "layoutOptions": {
+      "extendable": true,
+      "sheetMode": "RESPONSIVE"
+    },
+    "height": 142,
+    "components": [
+      {
+        "key": "general",
+        "auto": false,
+        "bgColor": {
+          "color": {
+            "index": -1,
+            "color": "#595957"
+          }
+        }
+      }
+    ]
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "pRrkGAw",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "2e13d803-c738-451a-be24-a40a21483bce",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65b0cf0bf62eb8a308f81ed8"
+            },
+            "label": "Event Codes Breakdown",
+            "refId": "hssMLj",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "PnpBKhz",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "65b50c85-a088-4bd6-880c-d47f5b82c860",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65b0cf0bf62eb8a308f81ed8"
+            },
+            "label": "Battery Voltage Trend (V)",
+            "refId": "kkZYpT",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "mNYBet",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "2e0a2bf6-8666-4e33-a152-f7163698d58b",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65b0cf0bf62eb8a308f81ed8"
+            },
+            "label": "Fuel Consumption (L)",
+            "refId": "yCxJJnJ",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "QJrDW",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "29665407-7c50-4607-a149-b5997d9ba9c0",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65b0cf0bf62eb8a308f81ed8"
+            },
+            "label": "Fuel Level (%)",
+            "refId": "GHuHqE",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "mEJKn",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "3a6a3017-8cd6-49f8-bb42-0833b9e20321",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65b0cf0bf62eb8a308f81ed8"
+            },
+            "label": "Bobcat Instant Data",
+            "refId": "pRDwLY",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    }
+  ]
+}

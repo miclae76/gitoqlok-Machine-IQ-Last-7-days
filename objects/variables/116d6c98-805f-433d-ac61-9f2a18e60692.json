@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "116d6c98-805f-433d-ac61-9f2a18e60692",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "CHREXPR",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": " chr(39) "
+}

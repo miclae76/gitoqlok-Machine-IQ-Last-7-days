@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "0d7ec085-a83f-4cad-9e5c-244718671ab2",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "asset_id",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "'{\"quote\": \"\"'"
+}

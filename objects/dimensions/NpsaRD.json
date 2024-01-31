@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "NpsaRD",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "esn"
+    ],
+    "qFieldLabels": [
+      "ESN"
+    ],
+    "title": "ESN",
+    "coloring": {
+      "changeHash": "0.31204473351605433",
+      "hasValueColors": false,
+      "colorMapRef": "NpsaRD"
+    }
+  },
+  "qMetaDef": {
+    "title": "ESN",
+    "description": "",
+    "tags": [
+      "esn"
+    ]
+  }
+}

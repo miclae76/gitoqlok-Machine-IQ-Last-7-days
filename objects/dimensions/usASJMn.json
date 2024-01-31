@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "usASJMn",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=date(floor(last_association_ts), 'MMM D, YYYY')"
+    ],
+    "qFieldLabels": [
+      "Last association TS"
+    ],
+    "title": "Last association TS",
+    "coloring": {
+      "changeHash": "0.6790016343877456",
+      "hasValueColors": false,
+      "colorMapRef": "usASJMn"
+    }
+  },
+  "qMetaDef": {
+    "title": "Last association TS",
+    "description": "",
+    "tags": []
+  }
+}

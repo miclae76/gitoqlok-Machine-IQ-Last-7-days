@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "33450452-ba51-45f9-bd37-626abef332df",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "DISABLE_AUTO_CHART",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "1"
+}

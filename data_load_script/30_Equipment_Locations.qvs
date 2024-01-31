@@ -1,0 +1,29 @@
+///$tab 30_Equipment_Locations
+[iot_debounced_location_sessions]:
+LOAD * where "last_update_ts" = last_ts_location;
+LOAD *,
+	window(max("last_update_ts"), asset_id) AS last_ts_location;
+SELECT "location_id",
+	"asset_id",
+	"start_ts",
+	--"start_event_id" ,
+	"start_engine_hours",
+	"iot_debounced_location_sessions_weekly".latitude,
+	"iot_debounced_location_sessions_weekly".longitude,
+	"s2_cell_id_12" ,
+	--"s2_cell_id_19",
+	--"s2_cell_id_20",
+	"end_ts",
+	--"end_event_id",
+	--"end_engine_hours",
+	--"session_state",
+	"last_update_ts",
+	"debounce_distance",
+    municipality,
+	region,
+	"sub_region",
+	country
+FROM iotv3."iot_debounced_location_sessions_weekly"
+INNER JOIN iotv3."iot_addresses" 
+ON  "address_id" = "s2_cell_id_12"
+;

@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "808a57a8-bfde-4c10-806a-e2f1ba3f3537",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "region"
+    ],
+    "qFieldLabels": [
+      "Region"
+    ],
+    "title": "Region",
+    "coloring": {
+      "colorMapRef": "psSRAj",
+      "changeHash": "0.54649513932636",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Region",
+    "description": "",
+    "tags": [
+      "esn",
+      "location"
+    ]
+  }
+}

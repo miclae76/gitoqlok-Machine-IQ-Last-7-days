@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "33701f9c-1021-4b9f-9251-2fc685920645",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "odags_asset_id",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "'aljg30693'"
+}

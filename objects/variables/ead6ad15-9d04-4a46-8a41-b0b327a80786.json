@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "ead6ad15-9d04-4a46-8a41-b0b327a80786",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "v_TimeZone",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "UTC",
+  "qIsScriptCreated": true
+}

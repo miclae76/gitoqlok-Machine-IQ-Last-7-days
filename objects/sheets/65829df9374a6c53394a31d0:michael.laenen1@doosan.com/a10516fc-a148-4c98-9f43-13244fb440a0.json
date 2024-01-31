@@ -1,0 +1,219 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "a10516fc-a148-4c98-9f43-13244fb440a0",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "Equipment Locations Single",
+      "description": ""
+    },
+    "rank": 0.5,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "columns": 24,
+    "rows": 12,
+    "cells": [
+      {
+        "name": "mVEKP",
+        "type": "container",
+        "col": 0,
+        "row": 0,
+        "colspan": 12,
+        "rowspan": 12,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 50,
+          "height": 100
+        }
+      },
+      {
+        "name": "tAeVFWp",
+        "type": "container",
+        "col": 12,
+        "row": 0,
+        "colspan": 12,
+        "rowspan": 2,
+        "bounds": {
+          "y": 0,
+          "x": 50,
+          "width": 50,
+          "height": 16.666666666666664
+        }
+      },
+      {
+        "name": "jJJdD",
+        "type": "container",
+        "col": 12,
+        "row": 2,
+        "colspan": 12,
+        "rowspan": 2,
+        "bounds": {
+          "y": 16.666666666666664,
+          "x": 50,
+          "width": 50,
+          "height": 16.666666666666664
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "customRowBase": 12,
+    "gridResolution": "small",
+    "layoutOptions": {
+      "mobileLayout": "LIST"
+    },
+    "gridMode": "edit"
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "mVEKP",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "6a940cc5-3865-4ed2-9fcf-6929089abe69",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65b0cf0bf62eb8a308f81ed8"
+            },
+            "label": "Asset Locations",
+            "refId": "DrumTs",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "tAeVFWp",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "a3193623-ac5e-4ac0-a8aa-21ce2d916fad",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65b0cf0bf62eb8a308f81ed8"
+            },
+            "label": "Municipality",
+            "refId": "ByUVMX",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "jJJdD",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "10ab7808-e8b6-4603-885b-84449e575ada",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65b0cf0bf62eb8a308f81ed8"
+            },
+            "label": "Sub Region",
+            "refId": "hufmPJ",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "3384f8fe-d25d-48c2-aac4-02b20cec131c",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "odag_TimeZone",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "'UTC'"
+}

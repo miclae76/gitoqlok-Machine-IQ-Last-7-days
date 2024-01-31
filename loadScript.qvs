@@ -1,0 +1,362 @@
+///$tab 00_Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$ ###0.00;-$ ###0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+
+
+
+
+
+///$tab 10_Connect
+// IF '$(odagActive)'='' THEN
+// trace ODAG variables not inserted! Loading sample data.;
+// SET odags_asset_id = '''aljg30693''';
+// SET odag_TimeZone = '''UTC''';
+// END IF;
+
+// MyTempBindingData:
+// LOAD * INLINE [VAL
+// $(odags_asset_id){"quote": "", "delimiter": "\n"}
+// $(odago_TimeZone){"quote": "", "delimiter": "\n"}
+// ];
+
+
+
+TimeZoneTable:
+LOAD * INLINE [
+TimeZone
+CET
+CST
+EET
+EST
+MST
+PST
+UTC
+WET
+];
+
+TimeScopeTable:
+LOAD * INLINE [
+TimeScope
+Last 7 days
+Last 30 days
+Last 90 days
+This Month
+Last Month
+This Year
+Last Year
+Full History
+];
+
+
+LIB CONNECT TO 'Common DATA:Machine IQ';
+///$tab 15 Device_Assocation
+TRACE *** Load iot_things ***;
+
+Devise_Association_History:
+SELECT substring(iotv3.iot_things.name, 8, 10) AS esn,
+	   iotv3.iot_things.name,
+       iotv3.iot_things.created,
+       iotv3.iot_things.subscription_status,
+       iotv3.iot_things.version,
+       iotv3.iot_things.data_partition,
+       iotv3.iot_things.imei,
+       iotv3.iot_things.imsi,
+       iotv3.iot_things.iccid,
+       iotv3.iot_things.device_management,
+       iotv3.iot_things.cellular_protocol,
+       iotv3.iot_things.cellular_carrier,
+       iotv3.iot_things.device_type,
+       iotv3.iot_things.part_number
+      -- first_equipment_association.asset_id
+      -- first_equipment_association.sample_ts as first_association_ts,   
+      -- last_equipment_association.sample_ts as last_association_ts
+from iotv3.iot_things;
+
+TRACE  *** Retrieve first and last equipment assocation ***;
+temp_equipment_association:
+SELECT 
+	asset_id, 
+    aws_thing_name, 
+    min(sample_ts) as first_sample_ts,
+    max(sample_ts) as last_sample_ts
+FROM iotv3.iot_messages
+GROUP BY asset_id, aws_thing_name
+;
+
+TRACE *** Join results to Device table ****;
+LEFT JOIN (Devise_Association_History)
+LOAD 
+  asset_id, 
+  aws_thing_name as name, 
+ // first_sample_ts AS first_association_ts,
+ // last_sample_ts AS last_association_ts
+  first_sample_ts	AS first_association_ts,
+  last_sample_ts	AS last_association_ts
+RESIDENT temp_equipment_association
+;
+
+
+drop Tables temp_equipment_association;
+
+/*
+Device_Association_History:
+
+
+SQL WITH 
+ first_equipment_association AS
+  (WITH equipment_id_association AS 
+    (SELECT asset_id, aws_thing_name, sample_ts, ROW_NUMBER() OVER (PARTITION BY asset_id, aws_thing_name ORDER BY sample_ts ASC) rn
+    FROM iotv3.iot_messages)   
+  SELECT asset_id, aws_thing_name, sample_ts
+  FROM equipment_id_association
+  WHERE rn = 1),
+    last_equipment_association AS
+  (WITH last_equipment_id_association AS 
+    (SELECT asset_id, aws_thing_name, sample_ts, ROW_NUMBER() OVER (PARTITION BY asset_id, aws_thing_name ORDER BY sample_ts DESC) rn
+    FROM iotv3.iot_messages)   
+  SELECT asset_id, aws_thing_name, sample_ts
+  FROM last_equipment_id_association
+  WHERE rn = 1)
+SELECT iotv3.iot_things.name,
+       iotv3.iot_things.created,
+       iotv3.iot_things.subscription_status,
+       iotv3.iot_things.version,
+       iotv3.iot_things.data_partition,
+       iotv3.iot_things.imei,
+       iotv3.iot_things.imsi,
+       iotv3.iot_things.iccid,
+       iotv3.iot_things.device_management,
+       iotv3.iot_things.cellular_protocol,
+       iotv3.iot_things.cellular_carrier,
+       iotv3.iot_things.device_type,
+       iotv3.iot_things.part_number,
+       first_equipment_association.asset_id,
+       first_equipment_association.sample_ts as first_association_ts,   
+       last_equipment_association.sample_ts as last_association_ts
+from iotv3.iot_things
+  LEFT JOIN first_equipment_association ON iotv3.iot_things.name = first_equipment_association.aws_thing_name
+  left join last_equipment_association on (first_equipment_association.aws_thing_name = last_equipment_association.aws_thing_name) and (first_equipment_association.asset_id = last_equipment_association.asset_id)
+;
+*/
+///$tab 16_iot_equipement
+LIB CONNECT TO 'Common DATA:Machine IQ';
+
+[iot_equipment]:
+LOAD asset_id, 
+	servicing_dealer_id, 
+	product_category, 
+	product_model, 
+	product_fault_category, 
+	product_equipment_type, 
+	test_machine, 
+	inventory_condition, 
+	ConvertToLocalTime("last_sync_time", '$(v_TimeZone)') AS "last_sync_time" , 
+	sync_retry, 
+	sync_failed, 
+	inventory_type, 
+	customer_account_id;
+SELECT "asset_id",
+	name,
+--	"data_partition",
+	"servicing_dealer_id",
+	"product_category",
+	"product_model",
+	"product_fault_category",
+	"product_equipment_type",
+	"test_machine",
+--	created,
+--	updated,
+--	deleted,
+	"inventory_condition",
+	"last_sync_time",
+	"sync_retry",
+	"sync_failed",
+	"inventory_type",
+	"customer_account_id"
+FROM iotv3."iot_equipment";
+
+[iot_equipment_status]:
+LOAD asset_id, 
+	 connected_status,
+     health_status,
+    service_status,
+	ConvertToLocalTime("Last_updated", '$(v_TimeZone)') AS "Last_updated" , 
+	Today() - floor(Last_updated) AS DaysSinceLastStatus
+    WHERE Last_updated = updated;
+LOAD 
+	asset_id,
+    connected_status,
+   updated,
+    health_status,
+    service_status,
+    Window(Max(updated),asset_id) AS Last_updated ;
+SELECT "asset_id",
+	"connected_status",
+	--created,
+	 updated,
+	--deleted,
+	"health_status",
+	"service_status"
+FROM iotv3."iot_equipment_status";
+
+
+
+
+///$tab 20_Periodic_Data
+SET v_TimeZone = 'UTC';
+
+[iot_events]:
+LOAD *, 
+	Timestamp(round("sample_ts", 1/24), 'MMM d,YYYY Htt') AS "sample_ts_hour",
+    Date(floor("sample_ts"), 'MMM d,YYYY') AS "sample_ts_day";
+LOAD 
+// 	"esn",
+//	"event_id",
+// 	"event_type",
+	"asset_id",
+//     "event_code",
+//     "message_id",
+//     "attachment_id",
+    ConvertToLocalTime("sample_ts", '$(v_TimeZone)') AS "sample_ts" ,
+	"machine_state_of_charge",
+	"machine_battery_voltage",
+	"internal_battery_voltage",
+//	rssi,
+	"data_service_status",
+	"fuel_level",
+	"cumulative_fuel_consumption",
+	"cumulative_engine_hours",
+	"def_level";
+SELECT 
+	--"esn",
+	--"event_id",
+	--"event_type",
+	"asset_id",
+   -- "event_code",
+   -- "message_id",
+   -- "attachment_id",
+    "sample_ts",
+	"machine_state_of_charge",
+	"machine_battery_voltage",
+	"internal_battery_voltage",
+	--rssi,
+	"data_service_status",
+	"fuel_level",
+	"cumulative_fuel_consumption",
+	"cumulative_engine_hours",
+	"def_level"
+FROM iotv3."iot_events"
+WHERE "sample_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;
+
+//FROM iotv3."iot_events_latest";
+
+//FROM iotv3."iot_events_latest";
+//WHERE "sample_ts" >= CURRENT_DATE - INTERVAL '7 DAY' ;
+
+//WHERE asset_id = $(odags_asset_id)  and sample_ts >= '2023-01-01';
+
+
+
+///$tab 30_Equipment_Locations
+[iot_debounced_location_sessions]:
+LOAD * where "last_update_ts" = last_ts_location;
+LOAD *,
+	window(max("last_update_ts"), asset_id) AS last_ts_location;
+SELECT "location_id",
+	"asset_id",
+	"start_ts",
+	--"start_event_id" ,
+	"start_engine_hours",
+	"iot_debounced_location_sessions_weekly".latitude,
+	"iot_debounced_location_sessions_weekly".longitude,
+	"s2_cell_id_12" ,
+	--"s2_cell_id_19",
+	--"s2_cell_id_20",
+	"end_ts",
+	--"end_event_id",
+	--"end_engine_hours",
+	--"session_state",
+	"last_update_ts",
+	"debounce_distance",
+    municipality,
+	region,
+	"sub_region",
+	country
+FROM iotv3."iot_debounced_location_sessions_weekly"
+INNER JOIN iotv3."iot_addresses" 
+ON  "address_id" = "s2_cell_id_12"
+;
+
+
+
+
+///$tab 60_Utilization
+[iot_engine_hours_aggregation]:
+LOAD 
+	*, 
+    Date(floor("aggregate_ts"), 'MMM d,YYYY') AS "aggregate_ts_day",
+    if(extract_hours <= 6,  '00:00 - 00:06', 
+    	if(extract_hours > 6 and extract_hours <= 12, '00:06 - 12:00',
+        	if(extract_hours > 12 and extract_hours <= 18, '12:00 - 18:00',
+    '18:00 - 24:00')))     AS hours_quad
+;
+LOAD 
+ *,
+ hour("aggregate_ts") AS extract_hours
+;
+SELECT 
+    "asset_id",
+	"aggregate_ts",
+	"engine_hours",
+	"invalid_data_detected",
+	"cumulative_engine_hours_final"
+FROM iotv3."iot_engine_hours_aggregation"
+WHERE "aggregate_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;
+
+
+///$tab 50_Fault_Data
+[iot_fault_sessions]:
+SELECT 
+	"asset_id",
+	"fault_code_id",
+	status,
+	severity,
+	"customer_name" as fault_name,
+	created as fault_created
+FROM iotv3."iot_fault_sessions"
+WHERE status = 'ACTIVE';
+///$tab 900_Search
+Search Include 
+	municipality,
+	region,
+	"sub_region",
+	country,
+    asset_id,
+    esn,
+    "product_category",
+	"product_model",
+	"product_fault_category",
+	"product_equipment_type",
+    fault_name
+    ;
+    
+///$tab 999_EXIT
+EXIT SCRIPT;

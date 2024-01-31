@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "864e9a7d-4fd0-4bff-930d-3342a817f6e7",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "YourField_COLNAME",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "asset_id"
+}

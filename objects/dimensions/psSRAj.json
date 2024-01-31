@@ -1,0 +1,27 @@
+{
+  "qInfo": {
+    "qId": "psSRAj",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "data_partition"
+    ],
+    "qFieldLabels": [
+      "Data partition"
+    ],
+    "title": "Data partition",
+    "coloring": {
+      "changeHash": "0.311402216122723",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Data partition",
+    "description": "",
+    "tags": [
+      "esn"
+    ]
+  }
+}

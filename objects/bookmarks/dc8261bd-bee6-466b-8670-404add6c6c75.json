@@ -1,0 +1,73 @@
+{
+  "qInfo": {
+    "qId": "dc8261bd-bee6-466b-8670-404add6c6c75",
+    "qType": "bookmark"
+  },
+  "qMetaDef": {
+    "title": "Bookmark Default (UTC, Last 30 days)",
+    "description": "",
+    "isExtended": false
+  },
+  "creationDate": "2024-01-30T13:23:24.910Z",
+  "sheetId": "867b4c1b-f5d1-4da8-ad7b-d6fe906dfccf",
+  "selectionFields": "TimeZone, TimeScope",
+  "qBookMark": {
+    "qStateData": [
+      {
+        "qStateName": "$",
+        "qFieldItems": [
+          {
+            "qDef": {
+              "qName": "TimeZone",
+              "qType": "PRESENT"
+            },
+            "qSelectInfo": {
+              "qRangeLo": "NaN",
+              "qRangeHi": "NaN",
+              "qNumberFormat": {
+                "qType": "U",
+                "qnDec": 10,
+                "qUseThou": 0
+              },
+              "qRangeInfo": [],
+              "qContinuousRangeInfo": []
+            },
+            "qValues": [
+              {
+                "qText": "UTC",
+                "qNumber": "NaN"
+              }
+            ],
+            "qExcludedValues": []
+          },
+          {
+            "qDef": {
+              "qName": "TimeScope",
+              "qType": "PRESENT"
+            },
+            "qSelectInfo": {
+              "qRangeLo": "NaN",
+              "qRangeHi": "NaN",
+              "qNumberFormat": {
+                "qType": "U",
+                "qnDec": 10,
+                "qUseThou": 0
+              },
+              "qRangeInfo": [],
+              "qContinuousRangeInfo": []
+            },
+            "qValues": [
+              {
+                "qText": "Last 30 days",
+                "qNumber": "NaN"
+              }
+            ],
+            "qExcludedValues": []
+          }
+        ]
+      }
+    ],
+    "qVariableItems": [],
+    "qPatches": []
+  }
+}

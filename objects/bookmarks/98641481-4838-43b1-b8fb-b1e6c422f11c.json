@@ -1,0 +1,49 @@
+{
+  "qInfo": {
+    "qId": "98641481-4838-43b1-b8fb-b1e6c422f11c",
+    "qType": "bookmark"
+  },
+  "qMetaDef": {
+    "title": "asset id b3bw12488",
+    "description": "",
+    "isExtended": false
+  },
+  "creationDate": "2024-01-18T12:30:44.338Z",
+  "sheetId": null,
+  "selectionFields": "asset_id",
+  "qBookMark": {
+    "qStateData": [
+      {
+        "qStateName": "$",
+        "qFieldItems": [
+          {
+            "qDef": {
+              "qName": "asset_id",
+              "qType": "PRESENT"
+            },
+            "qSelectInfo": {
+              "qRangeLo": "NaN",
+              "qRangeHi": "NaN",
+              "qNumberFormat": {
+                "qType": "U",
+                "qnDec": 10,
+                "qUseThou": 0
+              },
+              "qRangeInfo": [],
+              "qContinuousRangeInfo": []
+            },
+            "qValues": [
+              {
+                "qText": "b3bw12486",
+                "qNumber": "NaN"
+              }
+            ],
+            "qExcludedValues": []
+          }
+        ]
+      }
+    ],
+    "qVariableItems": [],
+    "qPatches": []
+  }
+}

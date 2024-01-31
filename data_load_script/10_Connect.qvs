@@ -1,0 +1,43 @@
+///$tab 10_Connect
+// IF '$(odagActive)'='' THEN
+// trace ODAG variables not inserted! Loading sample data.;
+// SET odags_asset_id = '''aljg30693''';
+// SET odag_TimeZone = '''UTC''';
+// END IF;
+
+// MyTempBindingData:
+// LOAD * INLINE [VAL
+// $(odags_asset_id){"quote": "", "delimiter": "\n"}
+// $(odago_TimeZone){"quote": "", "delimiter": "\n"}
+// ];
+
+
+
+TimeZoneTable:
+LOAD * INLINE [
+TimeZone
+CET
+CST
+EET
+EST
+MST
+PST
+UTC
+WET
+];
+
+TimeScopeTable:
+LOAD * INLINE [
+TimeScope
+Last 7 days
+Last 30 days
+Last 90 days
+This Month
+Last Month
+This Year
+Last Year
+Full History
+];
+
+
+LIB CONNECT TO 'Common DATA:Machine IQ';

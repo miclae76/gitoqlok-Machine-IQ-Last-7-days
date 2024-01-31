@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "f25b1ced-d56f-4112-b158-7704f6a241f5",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "LOADEXPR",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "Concat(  chr(39)  & VAL &  chr(39) ,',') AS CombinedData"
+}

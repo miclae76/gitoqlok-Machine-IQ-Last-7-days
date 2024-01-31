@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "5be01e3b-07b2-4a08-b80c-24115f50b932",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "odago_TimeZone",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "'UTC'"
+}

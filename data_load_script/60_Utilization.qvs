@@ -1,0 +1,22 @@
+///$tab 60_Utilization
+[iot_engine_hours_aggregation]:
+LOAD 
+	*, 
+    Date(floor("aggregate_ts"), 'MMM d,YYYY') AS "aggregate_ts_day",
+    if(extract_hours <= 6,  '00:00 - 00:06', 
+    	if(extract_hours > 6 and extract_hours <= 12, '00:06 - 12:00',
+        	if(extract_hours > 12 and extract_hours <= 18, '12:00 - 18:00',
+    '18:00 - 24:00')))     AS hours_quad
+;
+LOAD 
+ *,
+ hour("aggregate_ts") AS extract_hours
+;
+SELECT 
+    "asset_id",
+	"aggregate_ts",
+	"engine_hours",
+	"invalid_data_detected",
+	"cumulative_engine_hours_final"
+FROM iotv3."iot_engine_hours_aggregation"
+WHERE "aggregate_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;

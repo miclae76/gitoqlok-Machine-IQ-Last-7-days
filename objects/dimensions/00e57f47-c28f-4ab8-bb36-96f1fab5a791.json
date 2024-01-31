@@ -1,0 +1,101 @@
+{
+  "qInfo": {
+    "qId": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "service_status"
+    ],
+    "qFieldLabels": [
+      "service_status"
+    ],
+    "title": "service_status",
+    "coloring": {
+      "changeHash": "0.890471254815066",
+      "hasValueColors": true,
+      "colorMapRef": "00e57f47-c28f-4ab8-bb36-96f1fab5a791"
+    }
+  },
+  "qMetaDef": {
+    "title": "service_status",
+    "description": "",
+    "tags": []
+  },
+  "_ColorMapModel": {
+    "qInfo": {
+      "qId": "ColorMapModel_00e57f47-c28f-4ab8-bb36-96f1fab5a791",
+      "qType": "ColorMap"
+    },
+    "qMeta": {
+      "_resourcetype": "app.object",
+      "_objecttype": "ColorMap",
+      "id": "ColorMapModel_00e57f47-c28f-4ab8-bb36-96f1fab5a791",
+      "approved": false,
+      "published": false,
+      "ownerId": "65829df9374a6c53394a31d0",
+      "createdDate": "2024-01-23T13:40:24.995Z",
+      "modifiedDate": "2024-01-23T13:42:15.933Z"
+    },
+    "colorMap": {
+      "colors": [
+        {
+          "value": "ACTION_RECOMMENDED_SOON",
+          "baseColor": {
+            "color": "#ffbb43",
+            "index": -1
+          }
+        },
+        {
+          "value": "IMMEDIATE_ACTION_REQUIRED",
+          "baseColor": {
+            "color": "#c13525",
+            "index": -1
+          }
+        },
+        {
+          "value": "NO_IMMEDIATE_ACTION_REQUIRED",
+          "baseColor": {
+            "color": "#6da06f",
+            "index": -1
+          }
+        },
+        {
+          "value": "NO_SERVICE_DUE",
+          "baseColor": {
+            "color": "#6da06f",
+            "index": -1
+          }
+        },
+        {
+          "value": "SERVICE_DUE",
+          "baseColor": {
+            "color": "#c13525",
+            "index": -1
+          }
+        },
+        {
+          "value": "SERVICE_DUE_SOON",
+          "baseColor": {
+            "color": "#ffbb43",
+            "index": -1
+          }
+        },
+        {
+          "value": "UNKNOWN",
+          "baseColor": {
+            "color": "#b0afae",
+            "index": 13
+          }
+        }
+      ],
+      "nul": null,
+      "oth": null,
+      "pal": null,
+      "single": null,
+      "usePal": true,
+      "autoFill": true
+    }
+  }
+}

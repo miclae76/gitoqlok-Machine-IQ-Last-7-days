@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "2b31d3db-5180-4f09-90cc-a88e77520e3e",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "sub_region"
+    ],
+    "qFieldLabels": [
+      "Sub region"
+    ],
+    "title": "Sub region",
+    "coloring": {
+      "colorMapRef": "psSRAj",
+      "changeHash": "0.3352933320503775",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Sub region",
+    "description": "",
+    "tags": [
+      "esn"
+    ]
+  }
+}

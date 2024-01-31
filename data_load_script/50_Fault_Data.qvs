@@ -1,0 +1,11 @@
+///$tab 50_Fault_Data
+[iot_fault_sessions]:
+SELECT 
+	"asset_id",
+	"fault_code_id",
+	status,
+	severity,
+	"customer_name" as fault_name,
+	created as fault_created
+FROM iotv3."iot_fault_sessions"
+WHERE status = 'ACTIVE';

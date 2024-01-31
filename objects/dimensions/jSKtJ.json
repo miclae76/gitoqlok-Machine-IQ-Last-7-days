@@ -1,0 +1,28 @@
+{
+  "qInfo": {
+    "qId": "jSKtJ",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "asset_id"
+    ],
+    "qFieldLabels": [
+      "Asset ID"
+    ],
+    "title": "Asset ID",
+    "coloring": {
+      "changeHash": "0.48852527327610074",
+      "hasValueColors": false,
+      "colorMapRef": "jSKtJ"
+    }
+  },
+  "qMetaDef": {
+    "title": "Asset ID",
+    "description": "",
+    "tags": [
+      "esn"
+    ]
+  }
+}

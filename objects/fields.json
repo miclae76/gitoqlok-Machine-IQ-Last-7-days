@@ -1,0 +1,721 @@
+[
+  {
+    "qName": "DaysSinceLastStatus",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "iot_equipment_status"
+    ]
+  },
+  {
+    "qName": "Last_updated",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_equipment_status"
+    ]
+  },
+  {
+    "qName": "TimeScope",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "TimeScopeTable"
+    ]
+  },
+  {
+    "qName": "TimeZone",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "TimeZoneTable"
+    ]
+  },
+  {
+    "qName": "aggregate_ts",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
+    ]
+  },
+  {
+    "qName": "aggregate_ts_day",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
+    ]
+  },
+  {
+    "qName": "asset_id",
+    "qTags": [
+      "$key"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History",
+      "iot_equipment",
+      "iot_equipment_status",
+      "iot_events",
+      "iot_debounced_location_sessions",
+      "iot_engine_hours_aggregation",
+      "iot_fault_sessions"
+    ]
+  },
+  {
+    "qName": "cellular_carrier",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "cellular_protocol",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "connected_status",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment_status"
+    ]
+  },
+  {
+    "qName": "country",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "created",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "cumulative_engine_hours",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "cumulative_engine_hours_final",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
+    ]
+  },
+  {
+    "qName": "cumulative_fuel_consumption",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "customer_account_id",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "data_partition",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "data_service_status",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "debounce_distance",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "def_level",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "device_management",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "device_type",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "end_ts",
+    "qTags": [],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "engine_hours",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
+    ]
+  },
+  {
+    "qName": "esn",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "extract_hours",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
+    ]
+  },
+  {
+    "qName": "fault_code_id",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_fault_sessions"
+    ]
+  },
+  {
+    "qName": "fault_created",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_fault_sessions"
+    ]
+  },
+  {
+    "qName": "fault_name",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_fault_sessions"
+    ]
+  },
+  {
+    "qName": "first_association_ts",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "fuel_level",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "health_status",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment_status"
+    ]
+  },
+  {
+    "qName": "hours_quad",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
+    ]
+  },
+  {
+    "qName": "iccid",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "imei",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "imsi",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "internal_battery_voltage",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "invalid_data_detected",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
+    ]
+  },
+  {
+    "qName": "inventory_condition",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "inventory_type",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "last_association_ts",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "last_sync_time",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "last_ts_location",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "last_update_ts",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "latitude",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "location_id",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "longitude",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "machine_battery_voltage",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "machine_state_of_charge",
+    "qTags": [],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "municipality",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "name",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "part_number",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "product_category",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "product_equipment_type",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "product_fault_category",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "product_model",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "region",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "s2_cell_id_12",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "sample_ts",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "sample_ts_day",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "sample_ts_hour",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_events"
+    ]
+  },
+  {
+    "qName": "service_status",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment_status"
+    ]
+  },
+  {
+    "qName": "servicing_dealer_id",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "severity",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_fault_sessions"
+    ]
+  },
+  {
+    "qName": "start_engine_hours",
+    "qTags": [],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "start_ts",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "status",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_fault_sessions"
+    ]
+  },
+  {
+    "qName": "sub_region",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_debounced_location_sessions"
+    ]
+  },
+  {
+    "qName": "subscription_status",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "sync_failed",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "sync_retry",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "test_machine",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "iot_equipment"
+    ]
+  },
+  {
+    "qName": "version",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Devise_Association_History"
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "f3e5f064-bfcf-45e0-98d8-58defa49560a",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "municipality"
+    ],
+    "qFieldLabels": [
+      "Municipality"
+    ],
+    "title": "Municipality",
+    "coloring": {
+      "colorMapRef": "psSRAj",
+      "changeHash": "0.5611905379302746",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Municipality",
+    "description": "",
+    "tags": [
+      "esn",
+      "location"
+    ]
+  }
+}

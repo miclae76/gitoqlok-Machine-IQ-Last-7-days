@@ -1,0 +1,135 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "qkfEtSX",
+      "qType": "odagapplink"
+    },
+    "qMetaDef": {
+      "odagLinkRef": "65af8adb19f5ff73e78ca0bb"
+    }
+  },
+  "qChildren": [],
+  "_odagLinkData": {
+    "bindings": [
+      {
+        "formatting": {
+          "delimiter": ",",
+          "quote": "'"
+        },
+        "range": {},
+        "selectAppParamName": "TimeScope",
+        "selectAppParamType": "Field",
+        "selectionStates": "SO",
+        "templateAppVarName": "TimeScope"
+      },
+      {
+        "formatting": {
+          "delimiter": ",",
+          "quote": "'"
+        },
+        "range": {},
+        "selectAppParamName": "asset_id",
+        "selectAppParamType": "Field",
+        "selectionStates": "SO",
+        "templateAppVarName": "asset_id"
+      },
+      {
+        "formatting": {
+          "delimiter": ",",
+          "quote": "'"
+        },
+        "range": {},
+        "selectAppParamName": "TimeZone",
+        "selectAppParamType": "Field",
+        "selectionStates": "SO",
+        "templateAppVarName": "TimeZone"
+      },
+      {
+        "formatting": {
+          "delimiter": ",",
+          "quote": "'"
+        },
+        "range": {},
+        "selectAppParamName": "esn",
+        "selectAppParamType": "Field",
+        "selectionStates": "SO",
+        "templateAppVarName": "esn"
+      }
+    ],
+    "createdDate": "2024-01-23T09:46:03.000Z",
+    "id": "65af8adb19f5ff73e78ca0bb",
+    "modifiedByUser": {
+      "id": "65829df9374a6c53394a31d0",
+      "name": "Michael Laenen",
+      "subject": "00uwaekttlMwr43ua1t7",
+      "tenantid": "kxGh3TYPLUyuBkNTYO6PEl9mfby993MU"
+    },
+    "name": "Single Asset",
+    "owner": {
+      "id": "65829df9374a6c53394a31d0",
+      "name": "Michael Laenen",
+      "subject": "00uwaekttlMwr43ua1t7",
+      "tenantid": "kxGh3TYPLUyuBkNTYO6PEl9mfby993MU"
+    },
+    "privileges": null,
+    "properties": {
+      "appOpenMethod": null,
+      "appRetentionTime": [
+        {
+          "context": "User_*",
+          "retentionTime": "P0DT1H"
+        }
+      ],
+      "disable": null,
+      "genAppLimit": [
+        {
+          "context": "User_*",
+          "limit": 1
+        }
+      ],
+      "genAppName": [
+        {
+          "context": "*",
+          "formatString": "{0}_{1}{2}{3}_{4}{5}{6}",
+          "params": [
+            "templateAppName",
+            "curYear",
+            "curMonth",
+            "curDay",
+            "curHr",
+            "curMin",
+            "curSec"
+          ]
+        }
+      ],
+      "limitPolicy": null,
+      "menuLabel": null,
+      "overrideGenAppLimit": [
+        {
+          "context": "User_*",
+          "overrideGenAppLimit": true
+        }
+      ],
+      "rowEstRange": [
+        {
+          "context": "*",
+          "highBound": 1
+        }
+      ],
+      "targetSheet": [
+        {
+          "context": "User_*",
+          "sheetId": "8993e9bd-b8be-4933-8224-80e94f32a6e7",
+          "sheetName": "8993e9bd-b8be-4933-8224-80e94f32a6e7"
+        }
+      ]
+    },
+    "rowEstExpr": "count(distinct asset_id)",
+    "status": "active",
+    "templateApp": {
+      "id": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+      "name": "Machine IQ - Periodic Data"
+    },
+    "templateAppChartObjects": null
+  }
+}

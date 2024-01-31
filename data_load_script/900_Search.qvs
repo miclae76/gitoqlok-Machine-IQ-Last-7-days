@@ -1,0 +1,14 @@
+///$tab 900_Search
+Search Include 
+	municipality,
+	region,
+	"sub_region",
+	country,
+    asset_id,
+    esn,
+    "product_category",
+	"product_model",
+	"product_fault_category",
+	"product_equipment_type",
+    fault_name
+    ;
