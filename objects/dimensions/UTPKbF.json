@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "UTPKbF",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=date(ConvertToLocalTime(start_ts, TimeZone), 'MMM d, YYYY h:mmtt')"
+    ],
+    "qFieldLabels": [
+      "Location Start TS"
+    ],
+    "qLabelExpression": "='Start TS ('&alt(TimeZone, 'UTC')&')'",
+    "title": "Location Start TS",
+    "coloring": {
+      "changeHash": "0.3850090860953763",
+      "hasValueColors": false,
+      "colorMapRef": "UTPKbF"
+    }
+  },
+  "qMetaDef": {
+    "title": "Location Start TS",
+    "description": "",
+    "tags": [
+      "timestamp"
+    ]
+  }
+}

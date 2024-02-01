@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "TXvwrM",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "cellular_carrier"
+    ],
+    "qFieldLabels": [
+      "Cellular Carrier"
+    ],
+    "qLabelExpression": "='Carrier'",
+    "title": "Cellular Carrier",
+    "coloring": {
+      "changeHash": "0.3365573956918737",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Cellular Carrier",
+    "description": "",
+    "tags": []
+  }
+}

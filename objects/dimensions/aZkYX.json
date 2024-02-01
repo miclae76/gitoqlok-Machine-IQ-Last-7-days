@@ -1,0 +1,27 @@
+{
+  "qInfo": {
+    "qId": "aZkYX",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "= if(hour(ConvertToLocalTime(aggregate_ts, TimeZone))  <= 6,  '00:00 - 00:06', \r\n    \tif(hour(ConvertToLocalTime(aggregate_ts, TimeZone))  > 6 and hour(ConvertToLocalTime(aggregate_ts, TimeZone))  <= 12, '00:06 - 12:00',\n        \tif(hour(ConvertToLocalTime(aggregate_ts, TimeZone))  > 12 and hour(ConvertToLocalTime(aggregate_ts, TimeZone))  <= 18, '12:00 - 18:00', '18:00 - 24:00')))    "
+    ],
+    "qFieldLabels": [
+      "Aggregated Hours Quad"
+    ],
+    "qLabelExpression": "='Hours'",
+    "title": "Aggregated Hours Quad",
+    "coloring": {
+      "changeHash": "0.9774002946590348",
+      "hasValueColors": false,
+      "colorMapRef": "aZkYX"
+    }
+  },
+  "qMetaDef": {
+    "title": "Aggregated Hours Quad",
+    "description": "",
+    "tags": []
+  }
+}

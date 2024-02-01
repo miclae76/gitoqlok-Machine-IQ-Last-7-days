@@ -3,15 +3,15 @@ TRACE *** iot_engine_hours_aggregation on last 7 days ***;
 
 [iot_engine_hours_aggregation]:
 LOAD 
-	*, 
-    Date(floor("aggregate_ts"), 'MMM d,YYYY') AS "aggregate_ts_day",
-    if(extract_hours <= 6,  '00:00 - 00:06', 
+	*,
+	if(extract_hours <= 6,  '00:00 - 00:06', 
     	if(extract_hours > 6 and extract_hours <= 12, '00:06 - 12:00',
         	if(extract_hours > 12 and extract_hours <= 18, '12:00 - 18:00',
-    '18:00 - 24:00')))     AS hours_quad
-;
-LOAD 
+    '18:00 - 24:00')))     AS aggregate_ts_hour_bin
+WHERE aggregate_ts >= (last_aggregate_ts - 7);
+LOAD
  *,
+ date(floor(aggregate_ts)) AS aggregate_ts_day,
  hour("aggregate_ts") AS extract_hours
 ;
 SELECT 
@@ -19,6 +19,7 @@ SELECT
 	"aggregate_ts",
 	"engine_hours",
 	"invalid_data_detected",
-	"cumulative_engine_hours_final"
+	"cumulative_engine_hours_final",
+    max("aggregate_ts") over (partition by "asset_id") as last_aggregate_ts
 FROM iotv3."iot_engine_hours_aggregation"
-WHERE "aggregate_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;
+WHERE "aggregate_ts" > CURRENT_DATE - INTERVAL '30 DAY' ;

@@ -1,0 +1,27 @@
+{
+  "qInfo": {
+    "qId": "zSLPDdp",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=Date(Floor(ConvertToLocalTime(aggregate_ts, TimeZone)), 'MMM d, YYYY')"
+    ],
+    "qFieldLabels": [
+      "Aggregated TS (Day)"
+    ],
+    "qLabelExpression": "='Day'",
+    "title": "Aggregated TS (Day)",
+    "coloring": {
+      "changeHash": "0.3107429784556106",
+      "hasValueColors": false,
+      "colorMapRef": "zSLPDdp"
+    }
+  },
+  "qMetaDef": {
+    "title": "Aggregated TS (Day)",
+    "description": "",
+    "tags": []
+  }
+}

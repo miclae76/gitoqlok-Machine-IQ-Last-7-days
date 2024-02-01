@@ -6,7 +6,7 @@
   "qDim": {
     "qGrouping": "N",
     "qFieldDefs": [
-      "=ConvertToLocalTime(equipment_last_update_ts, TimeZone)"
+      "=Date(ConvertToLocalTime(equipment_last_update_ts, TimeZone), 'MMM d, YYYY h:mmtt')"
     ],
     "qFieldLabels": [
       "Equipment Last Update TS"
@@ -14,7 +14,7 @@
     "qLabelExpression": "='Last update TS'",
     "title": "Equipment Last Update TS",
     "coloring": {
-      "changeHash": "0.7687421038586917",
+      "changeHash": "0.8391751389831745",
       "hasValueColors": false,
       "colorMapRef": "wKsZEmQ"
     }

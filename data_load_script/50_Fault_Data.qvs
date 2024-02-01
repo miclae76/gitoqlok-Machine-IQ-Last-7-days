@@ -1,5 +1,5 @@
 ///$tab 50_Fault_Data
-TRACE *** Load iot_fault_session (ACTIVE)  ***;
+TRACE *** Load iot_fault_sessions (ACTIVE)  ***;
 
 [iot_fault_sessions]:
 SELECT 

@@ -4,9 +4,6 @@ TRACE *** Load iot_events on last 7 days ***;
 SET v_TimeZone = 'UTC';
 
 [iot_events]:
-LOAD *, 
-	Timestamp(round("sample_ts", 1/24), 'MMM d,YYYY Htt') AS "sample_ts_hour",
-    Date(floor("sample_ts"), 'MMM d,YYYY') AS "sample_ts_day";
 LOAD 
 // 	"esn",
 //	"event_id",

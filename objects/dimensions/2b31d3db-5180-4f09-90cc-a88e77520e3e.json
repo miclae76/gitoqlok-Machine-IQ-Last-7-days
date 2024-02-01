@@ -9,17 +9,17 @@
       "sub_region"
     ],
     "qFieldLabels": [
-      "Sub region"
+      "Sub Region"
     ],
-    "title": "Sub region",
+    "title": "Sub Region",
     "coloring": {
-      "colorMapRef": "psSRAj",
-      "changeHash": "0.3352933320503775",
+      "colorMapRef": "2b31d3db-5180-4f09-90cc-a88e77520e3e",
+      "changeHash": "0.2525333720128786",
       "hasValueColors": false
     }
   },
   "qMetaDef": {
-    "title": "Sub region",
+    "title": "Sub Region",
     "description": "",
     "tags": [
       "esn"

@@ -1,0 +1,119 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "562ac3e8-6f35-4674-a40c-aeeee23f971f",
+      "qType": "masterobject"
+    },
+    "qMetaDef": {
+      "title": "Container Eq. Locations",
+      "description": "",
+      "tags": []
+    },
+    "objects": [
+      {
+        "childRefId": "pjYPQZPa",
+        "condition": {
+          "qValueExpression": {}
+        },
+        "label": "Location Last 7 days",
+        "bounds": {
+          "height": 25,
+          "width": 100,
+          "x": 0,
+          "y": 75
+        }
+      },
+      {
+        "childRefId": "Ajunett",
+        "condition": {
+          "qValueExpression": {}
+        },
+        "label": "Map Location Last 7 days",
+        "bounds": {
+          "height": 75,
+          "width": 100,
+          "x": 0,
+          "y": 0
+        }
+      }
+    ],
+    "showTitles": true,
+    "title": "Equipement Locations ",
+    "subtitle": "",
+    "footnote": "",
+    "disableNavMenu": true,
+    "showDetails": false,
+    "showDetailsExpression": false,
+    "components": [
+      {
+        "key": "general"
+      }
+    ],
+    "constrainToContainer": true,
+    "showGridLines": true,
+    "gridRowCount": 24,
+    "gridColumnCount": 36,
+    "snapToGrid": true,
+    "visualization": "sn-layout-container",
+    "qChildListDef": {
+      "qData": {
+        "visualization": "/visualization",
+        "qExtendsId": "/qExtendsId",
+        "title": "/title",
+        "childRefId": "/childRefId"
+      }
+    },
+    "version": "3.1.4",
+    "extensionMeta": {
+      "translationKey": "",
+      "icon": "layout-container",
+      "iconChar": "puzzle",
+      "isLibraryItem": true,
+      "visible": true,
+      "IconDefinition": {},
+      "name": "Layout container",
+      "description": "The layout container object has a canvas that can hold multiple objects. In this container you can freely move objects around, as well as position the objects on top of each other or overlapping.",
+      "template": "sn-layout-container",
+      "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+      "isThirdParty": true,
+      "version": "3.1.4",
+      "author": "QlikTech International AB",
+      "type": "visualization",
+      "supernova": true,
+      "bundle": {
+        "id": "qlik-dashboard-bundle",
+        "name": "Qlik Dashboard bundle",
+        "description": "This is a set of supported objects that will facilitate dashboard creation in Qlik Sense. These can be used in addition to the objects found under \"Charts\".\n\nFor limitations and support conditions, see the documentation."
+      },
+      "installer": "QlikExtensionBundler",
+      "folder": "_dashboard-bundle"
+    },
+    "masterVersion": 0.96
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "bfe5255f-5f60-408c-9c7d-389c56c76106",
+          "qType": "childObject"
+        },
+        "qExtendsId": "02d5b8f6-72d0-4f96-9377-b895a1cb21f3",
+        "qMetaDef": {},
+        "childRefId": "Ajunett"
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "8209791d-98e2-4e32-bf08-939d6c960092",
+          "qType": "childObject"
+        },
+        "qExtendsId": "cacd19f6-2fc2-47f6-a9cd-71dc935a31e2",
+        "qMetaDef": {},
+        "childRefId": "pjYPQZPa"
+      },
+      "qChildren": []
+    }
+  ]
+}

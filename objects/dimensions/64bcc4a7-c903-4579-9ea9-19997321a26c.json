@@ -9,17 +9,17 @@
       "subscription_status"
     ],
     "qFieldLabels": [
-      "Subscription status"
+      "Subscription Status"
     ],
-    "title": "Subscription status",
+    "title": "Subscription Status",
     "coloring": {
       "colorMapRef": "64bcc4a7-c903-4579-9ea9-19997321a26c",
-      "changeHash": "0.3331188770704183",
+      "changeHash": "0.7388902384189651",
       "hasValueColors": false
     }
   },
   "qMetaDef": {
-    "title": "Subscription status",
+    "title": "Subscription Status",
     "description": "",
     "tags": [
       "esn"

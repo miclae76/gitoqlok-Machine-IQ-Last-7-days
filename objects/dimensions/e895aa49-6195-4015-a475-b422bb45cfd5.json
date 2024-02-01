@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "e895aa49-6195-4015-a475-b422bb45cfd5",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "longitude"
+    ],
+    "qFieldLabels": [
+      "Longitude"
+    ],
+    "title": "Longitude",
+    "coloring": {
+      "colorMapRef": "jHYbmaX",
+      "changeHash": "0.7355899417243028",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Longitude",
+    "description": "Equipment Longitude",
+    "tags": []
+  }
+}

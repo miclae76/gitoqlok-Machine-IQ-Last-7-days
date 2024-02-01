@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "pfmut",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "inventory_type"
+    ],
+    "qFieldLabels": [
+      "Inventory Type"
+    ],
+    "title": "Inventory Type",
+    "coloring": {
+      "changeHash": "0.40988156551809674",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Inventory Type",
+    "description": "",
+    "tags": []
+  }
+}

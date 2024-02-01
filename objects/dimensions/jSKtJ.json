@@ -11,9 +11,10 @@
     "qFieldLabels": [
       "Asset ID"
     ],
+    "qLabelExpression": "='Equipment ID'",
     "title": "Asset ID",
     "coloring": {
-      "changeHash": "0.48852527327610074",
+      "changeHash": "0.025560059073928",
       "hasValueColors": false,
       "colorMapRef": "jSKtJ"
     }

@@ -1,0 +1,29 @@
+{
+  "qInfo": {
+    "qId": "c26feed5-a2dd-4678-a94b-8662c44dedb8",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "=date(ConvertToLocalTime(end_ts, TimeZone), 'MMM d, YYYY h:mmtt')"
+    ],
+    "qFieldLabels": [
+      "Location End TS"
+    ],
+    "qLabelExpression": "='End TS ('&alt(TimeZone, 'UTC')&')'",
+    "title": "Location End TS",
+    "coloring": {
+      "changeHash": "0.5080761360461943",
+      "hasValueColors": false,
+      "colorMapRef": "c26feed5-a2dd-4678-a94b-8662c44dedb8"
+    }
+  },
+  "qMetaDef": {
+    "title": "Location End TS",
+    "description": "",
+    "tags": [
+      "timestamp"
+    ]
+  }
+}

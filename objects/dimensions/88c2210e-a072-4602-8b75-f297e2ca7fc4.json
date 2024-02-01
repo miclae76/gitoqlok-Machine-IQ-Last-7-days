@@ -9,17 +9,17 @@
       "product_equipment_type"
     ],
     "qFieldLabels": [
-      "Product equipement type"
+      "Product Equipement Type"
     ],
-    "title": "Product equipement type",
+    "title": "Product Equipement Type",
     "coloring": {
-      "colorMapRef": "pVmPFWB",
-      "changeHash": "0.7468265529796878",
+      "colorMapRef": "88c2210e-a072-4602-8b75-f297e2ca7fc4",
+      "changeHash": "0.9770842068257366",
       "hasValueColors": false
     }
   },
   "qMetaDef": {
-    "title": "Product equipement type",
+    "title": "Product Equipement Type",
     "description": "",
     "tags": []
   }

@@ -9,17 +9,17 @@
       "product_category"
     ],
     "qFieldLabels": [
-      "Product category"
+      "Product Category"
     ],
-    "title": "Product category",
+    "title": "Product Category",
     "coloring": {
-      "colorMapRef": "pVmPFWB",
-      "changeHash": "0.9153340266541243",
+      "colorMapRef": "9f1ef9c3-0c70-4ed4-aa15-650aa73bfac2",
+      "changeHash": "0.4250247870047805",
       "hasValueColors": false
     }
   },
   "qMetaDef": {
-    "title": "Product category",
+    "title": "Product Category",
     "description": "",
     "tags": []
   }

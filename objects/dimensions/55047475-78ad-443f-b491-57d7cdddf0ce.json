@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "55047475-78ad-443f-b491-57d7cdddf0ce",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "service_status"
+    ],
+    "qFieldLabels": [
+      "Device Type"
+    ],
+    "title": "Device Type",
+    "coloring": {
+      "colorMapRef": "TgSXyJ",
+      "changeHash": "0.24136518578930044",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Device Type",
+    "description": "",
+    "tags": []
+  }
+}

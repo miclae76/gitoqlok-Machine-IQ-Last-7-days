@@ -1,33 +1,3 @@
 ///$tab 10_Connect
-TRACE *** Create static tables ***;
-
-//Static table to enable time zone selection for TS adjsuted 
-TimeZoneTable:
-LOAD * INLINE [
-TimeZone
-CET
-CST
-EET
-EST
-MST
-PST
-UTC
-WET
-];
-
-//Static table to select historical data for on-demand template app
-TimeScopeTable:
-LOAD * INLINE [
-TimeScope
-Last 7 days
-Last 30 days
-Last 90 days
-This Month
-Last Month
-This Year
-Last Year
-Full History
-];
-
 TRACE *** Connect to MIQ data ***;
 LIB CONNECT TO 'Common DATA:Machine IQ';

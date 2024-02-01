@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "TgSXyJ",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "data_service_status"
+    ],
+    "qFieldLabels": [
+      "Data Services Status"
+    ],
+    "title": "Data Services Status",
+    "coloring": {
+      "changeHash": "0.4023475822119018",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Data Services Status",
+    "description": "",
+    "tags": []
+  }
+}

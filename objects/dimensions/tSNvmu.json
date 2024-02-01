@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "tSNvmu",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "country"
+    ],
+    "qFieldLabels": [
+      "Country"
+    ],
+    "title": "Country",
+    "coloring": {
+      "changeHash": "0.1502897378518393",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Country",
+    "description": "",
+    "tags": []
+  }
+}

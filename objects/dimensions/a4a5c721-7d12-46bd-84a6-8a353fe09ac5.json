@@ -1,6 +1,6 @@
 {
   "qInfo": {
-    "qId": "pVmPFWB",
+    "qId": "a4a5c721-7d12-46bd-84a6-8a353fe09ac5",
     "qType": "dimension"
   },
   "qDim": {
@@ -11,11 +11,12 @@
     "qFieldLabels": [
       "Cellular Protocol"
     ],
+    "qLabelExpression": "='Protocol'",
     "title": "Cellular Protocol",
     "coloring": {
-      "changeHash": "0.47822284562947326",
-      "hasValueColors": false,
-      "colorMapRef": "pVmPFWB"
+      "colorMapRef": "TXvwrM",
+      "changeHash": "0.8339243998330845",
+      "hasValueColors": false
     }
   },
   "qMetaDef": {

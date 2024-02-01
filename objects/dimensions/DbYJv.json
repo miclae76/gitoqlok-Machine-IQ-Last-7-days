@@ -13,7 +13,7 @@
     ],
     "title": "First association TS",
     "coloring": {
-      "changeHash": "0.5669224225274703",
+      "changeHash": "0.4170390156269437",
       "hasValueColors": false,
       "colorMapRef": "DbYJv"
     }
@@ -22,7 +22,8 @@
     "title": "First association TS",
     "description": "",
     "tags": [
-      "esn"
+      "esn",
+      "timestamp"
     ]
   }
 }

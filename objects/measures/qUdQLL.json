@@ -36,8 +36,8 @@
           }
         ],
         "breakTypes": [
-          false,
-          false
+          true,
+          true
         ],
         "limits": [
           0.3,

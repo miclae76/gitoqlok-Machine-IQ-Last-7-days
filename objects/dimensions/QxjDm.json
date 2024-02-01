@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "QxjDm",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "product_model"
+    ],
+    "qFieldLabels": [
+      "Product Model"
+    ],
+    "title": "Product Model",
+    "coloring": {
+      "changeHash": "0.15415686113065252",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Product Model",
+    "description": "",
+    "tags": []
+  }
+}

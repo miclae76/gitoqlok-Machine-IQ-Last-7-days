@@ -1,12 +1,40 @@
 [
   {
+    "qName": "End Date",
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Predefined_Date_Ranges",
+      "CalendarToTable"
+    ]
+  },
+  {
+    "qName": "Start Date",
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Predefined_Date_Ranges",
+      "CalendarFromTable"
+    ]
+  },
+  {
     "qName": "TimeScope",
     "qTags": [
       "$ascii",
       "$text"
     ],
     "qSrcTables": [
-      "TimeScopeTable"
+      "Predefined_Date_Ranges"
     ]
   },
   {
@@ -42,6 +70,16 @@
     ]
   },
   {
+    "qName": "aggregate_ts_hour_bin",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
+    ]
+  },
+  {
     "qName": "asset_id",
     "qTags": [
       "$key"
@@ -52,8 +90,8 @@
       "iot_equipment_status",
       "iot_events",
       "iot_debounced_location_sessions",
-      "iot_engine_hours_aggregation",
-      "iot_fault_sessions"
+      "iot_fault_sessions",
+      "iot_engine_hours_aggregation"
     ]
   },
   {
@@ -306,16 +344,6 @@
     ]
   },
   {
-    "qName": "hours_quad",
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
-    ]
-  },
-  {
     "qName": "iccid",
     "qTags": [
       "$ascii",
@@ -382,6 +410,16 @@
     ],
     "qSrcTables": [
       "iot_equipment"
+    ]
+  },
+  {
+    "qName": "last_aggregate_ts",
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "iot_engine_hours_aggregation"
     ]
   },
   {
@@ -558,28 +596,6 @@
   },
   {
     "qName": "sample_ts",
-    "qTags": [
-      "$numeric",
-      "$timestamp"
-    ],
-    "qSrcTables": [
-      "iot_events"
-    ]
-  },
-  {
-    "qName": "sample_ts_day",
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date"
-    ],
-    "qSrcTables": [
-      "iot_events"
-    ]
-  },
-  {
-    "qName": "sample_ts_hour",
     "qTags": [
       "$numeric",
       "$timestamp"

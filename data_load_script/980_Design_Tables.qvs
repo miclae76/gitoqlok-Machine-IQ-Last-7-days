@@ -1,0 +1,75 @@
+///$tab 980_Design_Tables
+TRACE *** Create static tables ***;
+
+//Static table to enable time zone selection for TS adjsuted 
+TimeZoneTable:
+LOAD * INLINE [
+TimeZone
+CET
+CST
+EET
+EST
+MST
+PST
+UTC
+WET
+];
+
+//Static table to select historical data for on-demand template app
+Predefined_Date_Ranges:
+LOAD 
+    'Last 7 days' 		AS TimeScope, 
+    Date(Today()-7) 	AS "Start Date",
+    Today() 			AS "End Date" 
+AutoGenerate 1;
+
+LOAD 
+    'Last 30 days' 		AS TimeScope, 
+    Date(Today()-30) 	AS "Start Date",
+    Today() 			AS "End Date" 
+AutoGenerate 1;
+
+LOAD 
+    'Last 14 days' 		AS TimeScope, 
+    Date(Today()-14) 	AS "Start Date",
+    Today() 			AS "End Date" 
+AutoGenerate 1;
+
+LOAD 
+    'Last 90 days' 		AS TimeScope, 
+    Date(Today()-90) 	AS "Start Date",
+    Today() 			AS "End Date" 
+AutoGenerate 1;
+
+LOAD 
+    'Current Month' 				AS TimeScope, 
+    Date(MonthStart(Today())) 		AS "Start Date",
+    Today() 						AS "End Date" 
+AutoGenerate 1;
+
+LOAD 
+    'Current Year' 					AS TimeScope, 
+    Date(Makedate(year(Today()))) 	AS "Start Date",
+    Today() 						AS "End Date" 
+AutoGenerate 1;
+
+LOAD 
+    'Last Year' 					AS TimeScope, 
+    Date(MonthStart(Today())) 		AS "Start Date",
+    Date(Makedate(year(Today()))-1) AS "End Date" 
+AutoGenerate 1;
+
+
+
+
+TRACE *** Generate Calendar for date picking (From, To) ***;
+
+CalendarFromTable:
+LOAD 
+	Date(MakeDate(Year(Today())-1) + RecNo() - 1) AS "Start Date"
+AutoGenerate Today() - MakeDate(Year(Today())-1) + RecNo() + 1;
+
+CalendarToTable:
+LOAD 
+	Date(MakeDate(Year(Today())-1) + RecNo() - 1) AS "End Date"
+AutoGenerate Today() - MakeDate(Year(Today())-1) + RecNo() + 1;

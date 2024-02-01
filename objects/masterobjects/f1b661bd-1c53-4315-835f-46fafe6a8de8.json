@@ -1,0 +1,103 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "f1b661bd-1c53-4315-835f-46fafe6a8de8",
+      "qType": "masterobject"
+    },
+    "qMetaDef": {
+      "title": "Filter Time Zone",
+      "description": "",
+      "tags": [
+        "Filter"
+      ]
+    },
+    "showTitles": true,
+    "title": "Time Zone",
+    "subtitle": "",
+    "footnote": "",
+    "disableNavMenu": true,
+    "showDetails": false,
+    "showDetailsExpression": false,
+    "visualization": "filterpane",
+    "version": "0.17.4",
+    "qChildListDef": {
+      "qData": {}
+    },
+    "components": [
+      {
+        "key": "general"
+      },
+      {
+        "key": "theme"
+      },
+      {
+        "key": "selections"
+      }
+    ],
+    "masterVersion": 0.96
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "c75216ba-78cb-4077-94ea-e1f68a59adb4",
+          "qType": "listbox"
+        },
+        "qMetaDef": {},
+        "qListObjectDef": {
+          "qDef": {
+            "qGrouping": "N",
+            "qFieldDefs": [
+              "TimeZone"
+            ],
+            "qFieldLabels": [
+              "TimeZone"
+            ],
+            "qSortCriterias": [
+              {
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              }
+            ],
+            "qNumberPresentations": [],
+            "qActiveField": 0,
+            "autoSort": false,
+            "textAlign": {
+              "auto": false,
+              "align": "left"
+            }
+          },
+          "qFrequencyMode": "N",
+          "qShowAlternatives": true,
+          "qInitialDataFetch": [],
+          "qExpressions": []
+        },
+        "title": {
+          "qStringExpression": {
+            "qExpr": "=If(TimeZone='UTC', 'UTC (Default)', TimeZone)"
+          }
+        },
+        "visualization": "listbox",
+        "layoutOptions": {
+          "dataLayout": "singleColumn",
+          "layoutOrder": "row",
+          "dense": false,
+          "maxVisibleRows": {
+            "auto": false,
+            "maxRows": 10
+          },
+          "maxVisibleColumns": {
+            "auto": false,
+            "maxColumns": 4
+          },
+          "collapseMode": "always"
+        },
+        "showTitle": false,
+        "checkboxes": true,
+        "searchEnabled": false,
+        "autoConfirm": true
+      },
+      "qChildren": []
+    }
+  ]
+}

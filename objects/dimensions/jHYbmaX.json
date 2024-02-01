@@ -1,0 +1,25 @@
+{
+  "qInfo": {
+    "qId": "jHYbmaX",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "N",
+    "qFieldDefs": [
+      "latitude"
+    ],
+    "qFieldLabels": [
+      "Latitude"
+    ],
+    "title": "Latitude",
+    "coloring": {
+      "changeHash": "0.25781283408386124",
+      "hasValueColors": false
+    }
+  },
+  "qMetaDef": {
+    "title": "Latitude",
+    "description": "Equipment Latitude",
+    "tags": []
+  }
+}
