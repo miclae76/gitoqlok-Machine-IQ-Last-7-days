@@ -41,7 +41,7 @@
           "qDef": {
             "qGrouping": "N",
             "qFieldDefs": [
-              "Start Date"
+              "Start_Date"
             ],
             "qFieldLabels": [
               "Start Date"
@@ -66,7 +66,7 @@
         },
         "title": {
           "qStringExpression": {
-            "qExpr": "'Start Date : '&Max(\"Start Date\")"
+            "qExpr": "'Start Date : '&Max(Start_Date)"
           }
         },
         "visualization": "listbox"
@@ -84,7 +84,7 @@
           "qDef": {
             "qGrouping": "N",
             "qFieldDefs": [
-              "End Date"
+              "End_Date"
             ],
             "qFieldLabels": [
               "End Date"
@@ -119,7 +119,7 @@
         "showTitles": true,
         "title": {
           "qStringExpression": {
-            "qExpr": "'End Date : '&Max(\"End Date\")"
+            "qExpr": "'End Date : '&Max(End_Date)"
           }
         },
         "subtitle": "",

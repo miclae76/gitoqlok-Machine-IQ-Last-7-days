@@ -100,20 +100,6 @@
         }
       },
       {
-        "name": "SavhaS",
-        "type": "action-button",
-        "col": 24,
-        "row": 0,
-        "colspan": 5,
-        "rowspan": 2,
-        "bounds": {
-          "y": 0,
-          "x": 66.66666666666666,
-          "width": 13.88888888888889,
-          "height": 11.11111111111111
-        }
-      },
-      {
         "name": "JJpuZUH",
         "type": "filterpane",
         "col": 5,
@@ -180,15 +166,7 @@
         }
       }
     ],
-    "navPoints": [
-      {
-        "info": {
-          "id": "RuyXH"
-        },
-        "title": "Single Asset",
-        "odagLinkRefID": "65af8adb19f5ff73e78ca0bb"
-      }
-    ]
+    "navPoints": []
   },
   "qChildren": [
     {
@@ -767,7 +745,7 @@
               }
             },
             {
-              "qLibraryId": "kRBrEz",
+              "qLibraryId": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [],
@@ -790,10 +768,10 @@
                 },
                 "columnWidth": {
                   "type": "pixels",
-                  "pixels": 248.77107142857142,
+                  "pixels": 153.19297619047617,
                   "percentage": 20
                 },
-                "cId": "QLJycnv"
+                "cId": "XphcRjb"
               },
               "qOtherTotalSpec": {
                 "qOtherMode": "OTHER_OFF",
@@ -823,7 +801,7 @@
               }
             },
             {
-              "qLibraryId": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
+              "qLibraryId": "kRBrEz",
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [],
@@ -846,10 +824,10 @@
                 },
                 "columnWidth": {
                   "type": "pixels",
-                  "pixels": 153.19297619047617,
+                  "pixels": 248.77107142857142,
                   "percentage": 20
                 },
-                "cId": "XphcRjb"
+                "cId": "QLJycnv"
               },
               "qOtherTotalSpec": {
                 "qOtherMode": "OTHER_OFF",
@@ -1113,14 +1091,14 @@
             5,
             8,
             9,
-            10,
+            11,
             15,
             13,
             2,
             14,
             12,
             7,
-            11
+            10
           ],
           "qInitialDataFetch": [
             {
@@ -1231,6 +1209,79 @@
           },
           "installer": "QlikExtensionBundler",
           "folder": "_visualization-bundle"
+        }
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "pu",
+          "qType": "sn-shape"
+        },
+        "qMetaDef": {},
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "components": [
+          {
+            "bgColor": {
+              "index": -1,
+              "color": "none"
+            },
+            "key": "general"
+          }
+        ],
+        "shape": {
+          "orientation": "horizontal",
+          "position": "center",
+          "style": {
+            "stroke": {
+              "colorByExpression": false,
+              "color": {
+                "index": 15
+              },
+              "colorExpression": "",
+              "width": 1,
+              "dash": {
+                "enabled": false,
+                "length": 8,
+                "spacing": 2
+              }
+            }
+          },
+          "type": "line"
+        },
+        "visualization": "sn-shape",
+        "version": "1.1.0",
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "line-object",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "IconDefinition": {},
+          "name": "Line",
+          "description": "Add vertical or horizontal lines with adjustable color and size. Use lines to divide objects, group parts, or to add flair to your dashboard.",
+          "template": "sn-shape",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "version": "1.1.0",
+          "author": "QlikTech International AB",
+          "preview": "",
+          "type": "visualization",
+          "supernova": true,
+          "bundle": {
+            "id": "qlik-dashboard-bundle",
+            "name": "Qlik Dashboard bundle",
+            "description": "This is a set of supported objects that will facilitate dashboard creation in Qlik Sense. These can be used in addition to the objects found under \"Charts\".\n\nFor limitations and support conditions, see the documentation."
+          },
+          "installer": "QlikExtensionBundler",
+          "folder": "_dashboard-bundle"
         }
       },
       "qChildren": []
@@ -1572,97 +1623,11 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "SavhaS",
-          "qType": "action-button"
+          "qId": "ngnbBp",
+          "qType": "filterpane"
         },
-        "qMetaDef": {},
-        "actions": [],
-        "navigation": {
-          "action": "goToSheet",
-          "appId": "",
-          "sheet": "BjzRn",
-          "chartId": "",
-          "story": "",
-          "websiteUrl": "",
-          "sameWindow": false,
-          "odagLink": "65af8adb19f5ff73e78ca0bb"
-        },
-        "useEnabledCondition": true,
-        "enabledCondition": {
-          "qValueExpression": {
-            "qExpr": "GetSelectedCount(asset_id)=1"
-          }
-        },
-        "showTitles": false,
-        "title": "",
-        "subtitle": "",
-        "footnote": "",
-        "disableNavMenu": true,
-        "showDetails": false,
-        "showDetailsExpression": false,
-        "style": {
-          "label": "Equipment Overview",
-          "showLabel": true,
-          "icon": {
-            "useIcon": true,
-            "iconType": "goto",
-            "position": "left"
-          },
-          "font": {
-            "fontFamily": "Source Sans Pro",
-            "useColorExpression": false,
-            "color": {
-              "index": -1,
-              "color": "#ffffff"
-            },
-            "colorExpression": "",
-            "size": 0.83,
-            "sizeFixed": 20,
-            "sizeBehavior": "responsive",
-            "style": {
-              "bold": true,
-              "italic": false,
-              "underline": false
-            },
-            "align": "center"
-          },
-          "background": {
-            "useColorExpression": false,
-            "color": {
-              "index": -1,
-              "color": "none"
-            },
-            "colorExpression": "",
-            "mode": "none",
-            "useImage": false,
-            "url": {
-              "qStaticContentUrlDef": {}
-            },
-            "size": "auto",
-            "position": "centerCenter"
-          },
-          "border": {
-            "useColorExpression": false,
-            "color": {
-              "index": 1,
-              "color": "#ffffff"
-            },
-            "colorExpression": "",
-            "useBorder": true,
-            "radius": 0,
-            "width": 0.5
-          }
-        },
-        "components": [
-          {
-            "key": "general",
-            "borderWidth": "16px",
-            "shadow": {}
-          }
-        ],
-        "visualization": "action-button",
-        "version": "1.40.0",
-        "appId": "f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec"
+        "qExtendsId": "8f1a3d7c-2925-4e65-b65b-40975e3301dd",
+        "qMetaDef": {}
       },
       "qChildren": []
     },
@@ -1806,7 +1771,7 @@
                     "qSortByLoadOrder": 1,
                     "qSortByExpression": -1,
                     "qExpression": {
-                      "qv": "Count({<health_status={\"*rec*\",\"imm*\"}>}health_status)/Count(total <product_model> health_status)"
+                      "qv": "Count(service_status)"
                     }
                   }
                 ],
@@ -1841,10 +1806,11 @@
               "qCalcCondition": {
                 "qCond": {},
                 "qMsg": {}
-              }
+              },
+              "$$hashKey": "object:3141"
             },
             {
-              "qLibraryId": "kRBrEz",
+              "qLibraryId": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [],
@@ -1860,11 +1826,11 @@
                 "qNumberPresentations": [],
                 "qActiveField": 0,
                 "autoSort": true,
-                "cId": "breUGzY",
-                "othersLabel": "Others"
+                "cId": "KPeNrn",
+                "othersLabel": "Autres"
               },
               "qOtherTotalSpec": {
-                "qOtherMode": "OTHER_COUNTED",
+                "qOtherMode": "OTHER_OFF",
                 "qOtherCounted": {
                   "qv": "10"
                 },
@@ -1879,43 +1845,41 @@
                 "qReferencedExpression": {}
               },
               "qOtherLabel": {
-                "qv": "Others"
+                "qv": "Autres"
               },
               "qTotalLabel": {},
               "qCalcCond": {},
               "qAttributeExpressions": [],
               "qAttributeDimensions": [
                 {
-                  "qLibraryId": "kRBrEz",
+                  "qLibraryId": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
                   "qSortBy": {
                     "qSortByAscii": 1,
                     "qExpression": {}
                   },
                   "qAttribute": true,
                   "id": "colorByAlternative",
-                  "colorMapRef": "kRBrEz"
+                  "colorMapRef": "00e57f47-c28f-4ab8-bb36-96f1fab5a791"
                 }
               ],
               "qCalcCondition": {
                 "qCond": {},
                 "qMsg": {}
               },
-              "title": "health_status",
-              "othersLabel": "Others"
+              "$$hashKey": "object:3142"
             }
           ],
           "qMeasures": [
             {
               "qDef": {
-                "qLabel": "Count(health_status)",
                 "qTags": [],
                 "qGrouping": "N",
-                "qDef": " (　Count(health_status)　) / Sum({1} Total<[$(=Replace(GetObjectField(0),']',']]'))]> Aggr({1}  (　Count(health_status)　) , [$(=Replace(GetObjectField(0),']',']]'))], [$(=Replace(GetObjectField(1),']',']]'))]))",
+                "qDef": "Count(service_status)\r\n",
                 "qNumFormat": {
                   "qType": "F",
                   "qnDec": 2,
                   "qUseThou": 0,
-                  "qFmt": "0%",
+                  "qFmt": "#,##0",
                   "qDec": ".",
                   "qThou": ","
                 },
@@ -1928,25 +1892,13 @@
                 "modifiers": [
                   {
                     "type": "normalization",
-                    "disabled": false,
+                    "disabled": true,
                     "primaryDimension": 0,
-                    "outputExpression": " (　Count(health_status)　) / Sum({1} Total<[$(=Replace(GetObjectField(0),']',']]'))]> Aggr({1}  (　Count(health_status)　) , [$(=Replace(GetObjectField(0),']',']]'))], [$(=Replace(GetObjectField(1),']',']]'))]))",
+                    "outputExpression": " (　Count(service_status)　) / Sum({1} Total<[$(=Replace(GetObjectField(0),']',']]'))]> Aggr({1}  (　Count(service_status)　) , [$(=Replace(GetObjectField(0),']',']]'))], [$(=Replace(GetObjectField(1),']',']]'))]))",
                     "dimensionalScope": 0,
-                    "selectionScope": 2,
-                    "base": {
-                      "qDef": "Count(health_status)",
-                      "qLibraryId": "",
-                      "qLabel": "",
-                      "qLabelExpression": ""
-                    }
+                    "selectionScope": 2
                   }
                 ],
-                "base": {
-                  "qDef": "Count(health_status)",
-                  "qLibraryId": "",
-                  "qLabel": "",
-                  "qLabelExpression": ""
-                },
                 "isCustomFormatted": false
               },
               "qSortBy": {
@@ -2046,7 +1998,7 @@
           "dimRefLines": []
         },
         "showTitles": true,
-        "title": "Breakdown by Product Model and status",
+        "title": "Service Status by Product Model",
         "subtitle": "",
         "footnote": "",
         "disableNavMenu": false,
@@ -2092,10 +2044,10 @@
           "autoMinMax": true,
           "measureMin": 0,
           "measureMax": 10,
-          "altLabel": "kRBrEz",
+          "altLabel": "Service Status",
           "byDimDef": {
-            "label": "kRBrEz",
-            "key": "kRBrEz",
+            "label": "Service Status",
+            "key": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
             "type": "libraryItem"
           }
         },
@@ -2114,13 +2066,13 @@
         },
         "preferContinuousAxis": true,
         "measureAxis": {
-          "show": "all",
+          "show": "labels",
           "dock": "near",
           "spacing": 1,
           "autoMinMax": true,
           "minMax": "max",
           "min": 0,
-          "max": 40000
+          "max": 5000
         },
         "tooltip": {
           "auto": true,
@@ -2159,8 +2111,19 @@
           },
           "quarantine": {}
         },
-        "hash": 0.8541496470254328,
+        "hash": 0.8843214023501351,
         "appId": "f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec"
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "JJpuZUH",
+          "qType": "filterpane"
+        },
+        "qExtendsId": "86f3e77a-ca0f-44ad-aed8-9b625c6f1fd3",
+        "qMetaDef": {}
       },
       "qChildren": []
     },
@@ -2237,7 +2200,7 @@
               "qDef": {
                 "qTags": [],
                 "qGrouping": "N",
-                "qDef": "Count(health_status)",
+                "qDef": "Count(service_status)",
                 "qNumFormat": {
                   "qType": "U",
                   "qnDec": 10,
@@ -2494,101 +2457,6 @@
           }
         },
         "appId": "f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec"
-      },
-      "qChildren": []
-    },
-    {
-      "qProperty": {
-        "qInfo": {
-          "qId": "JJpuZUH",
-          "qType": "filterpane"
-        },
-        "qExtendsId": "86f3e77a-ca0f-44ad-aed8-9b625c6f1fd3",
-        "qMetaDef": {}
-      },
-      "qChildren": []
-    },
-    {
-      "qProperty": {
-        "qInfo": {
-          "qId": "pu",
-          "qType": "sn-shape"
-        },
-        "qMetaDef": {},
-        "showTitles": false,
-        "title": "",
-        "subtitle": "",
-        "footnote": "",
-        "disableNavMenu": true,
-        "showDetails": false,
-        "showDetailsExpression": false,
-        "components": [
-          {
-            "bgColor": {
-              "index": -1,
-              "color": "none"
-            },
-            "key": "general"
-          }
-        ],
-        "shape": {
-          "orientation": "horizontal",
-          "position": "center",
-          "style": {
-            "stroke": {
-              "colorByExpression": false,
-              "color": {
-                "index": 15
-              },
-              "colorExpression": "",
-              "width": 1,
-              "dash": {
-                "enabled": false,
-                "length": 8,
-                "spacing": 2
-              }
-            }
-          },
-          "type": "line"
-        },
-        "visualization": "sn-shape",
-        "version": "1.1.0",
-        "extensionMeta": {
-          "translationKey": "",
-          "icon": "line-object",
-          "iconChar": "puzzle",
-          "isLibraryItem": true,
-          "visible": true,
-          "IconDefinition": {},
-          "name": "Line",
-          "description": "Add vertical or horizontal lines with adjustable color and size. Use lines to divide objects, group parts, or to add flair to your dashboard.",
-          "template": "sn-shape",
-          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
-          "isThirdParty": true,
-          "version": "1.1.0",
-          "author": "QlikTech International AB",
-          "preview": "",
-          "type": "visualization",
-          "supernova": true,
-          "bundle": {
-            "id": "qlik-dashboard-bundle",
-            "name": "Qlik Dashboard bundle",
-            "description": "This is a set of supported objects that will facilitate dashboard creation in Qlik Sense. These can be used in addition to the objects found under \"Charts\".\n\nFor limitations and support conditions, see the documentation."
-          },
-          "installer": "QlikExtensionBundler",
-          "folder": "_dashboard-bundle"
-        }
-      },
-      "qChildren": []
-    },
-    {
-      "qProperty": {
-        "qInfo": {
-          "qId": "ngnbBp",
-          "qType": "filterpane"
-        },
-        "qExtendsId": "8f1a3d7c-2925-4e65-b65b-40975e3301dd",
-        "qMetaDef": {}
       },
       "qChildren": []
     }

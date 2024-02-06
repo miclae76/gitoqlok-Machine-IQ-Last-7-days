@@ -1,4 +1,5 @@
 ///$tab 30_Equipment_Locations
+/*
 TRACE *** Load iot_debounced_location_sessions ***;
 
 [iot_debounced_location_sessions]:
@@ -30,3 +31,4 @@ FROM iotv3."iot_debounced_location_sessions_weekly"
 INNER JOIN iotv3."iot_addresses" 
 ON  "address_id" = "s2_cell_id_12"
 ;
+*/

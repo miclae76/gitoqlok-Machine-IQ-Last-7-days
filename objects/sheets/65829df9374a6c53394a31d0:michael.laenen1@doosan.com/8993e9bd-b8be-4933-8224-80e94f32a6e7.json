@@ -12,77 +12,147 @@
     "thumbnail": {
       "qStaticContentUrlDef": {}
     },
-    "columns": 24,
-    "rows": 17,
+    "columns": 36,
+    "rows": 19,
     "cells": [
       {
-        "name": "pRrkGAw",
+        "name": "BSbpe",
         "type": "container",
         "col": 0,
-        "row": 0,
+        "row": 2,
         "colspan": 12,
         "rowspan": 6,
         "bounds": {
-          "y": 0,
+          "y": 10.526315789473683,
           "x": 0,
-          "width": 50,
-          "height": 35.294117647058826
+          "width": 33.33333333333333,
+          "height": 31.57894736842105
         }
       },
       {
-        "name": "PnpBKhz",
+        "name": "BkYSg",
         "type": "container",
         "col": 12,
-        "row": 0,
-        "colspan": 12,
+        "row": 2,
+        "colspan": 18,
         "rowspan": 6,
         "bounds": {
-          "y": 0,
-          "x": 50,
+          "y": 10.526315789473683,
+          "x": 33.33333333333333,
           "width": 50,
-          "height": 35.294117647058826
+          "height": 31.57894736842105
         }
       },
       {
-        "name": "mNYBet",
+        "name": "TffcSbF",
         "type": "container",
         "col": 0,
-        "row": 6,
-        "colspan": 12,
+        "row": 8,
+        "colspan": 15,
         "rowspan": 6,
         "bounds": {
-          "y": 35.294117647058826,
+          "y": 42.10526315789473,
           "x": 0,
-          "width": 50,
-          "height": 35.294117647058826
+          "width": 41.66666666666667,
+          "height": 31.57894736842105
         }
       },
       {
-        "name": "QJrDW",
+        "name": "wZVuUr",
         "type": "container",
-        "col": 12,
-        "row": 6,
-        "colspan": 12,
+        "col": 15,
+        "row": 8,
+        "colspan": 15,
         "rowspan": 6,
         "bounds": {
-          "y": 35.294117647058826,
-          "x": 50,
-          "width": 50,
-          "height": 35.294117647058826
+          "y": 42.10526315789473,
+          "x": 41.66666666666667,
+          "width": 41.66666666666667,
+          "height": 31.57894736842105
         }
       },
       {
-        "name": "mEJKn",
+        "name": "gjeLMeQ",
         "type": "container",
         "col": 0,
-        "row": 12,
-        "colspan": 24,
+        "row": 14,
+        "colspan": 36,
         "rowspan": 5,
         "bounds": {
-          "y": 70.58823529411765,
+          "y": 73.68421052631578,
           "x": 0,
           "width": 100,
-          "height": 29.411764705882355
+          "height": 26.31578947368421
+        }
+      },
+      {
+        "name": "YucjFXU",
+        "type": "container",
+        "col": 30,
+        "row": 2,
+        "colspan": 6,
+        "rowspan": 3,
+        "bounds": {
+          "y": 10.526315789473683,
+          "x": 83.33333333333334,
+          "width": 16.666666666666664,
+          "height": 15.789473684210526
+        }
+      },
+      {
+        "name": "JWmseH",
+        "type": "container",
+        "col": 30,
+        "row": 5,
+        "colspan": 6,
+        "rowspan": 3,
+        "bounds": {
+          "y": 26.31578947368421,
+          "x": 83.33333333333334,
+          "width": 16.666666666666664,
+          "height": 15.789473684210526
+        }
+      },
+      {
+        "name": "xdEPfC",
+        "type": "container",
+        "col": 30,
+        "row": 8,
+        "colspan": 6,
+        "rowspan": 3,
+        "bounds": {
+          "y": 42.10526315789473,
+          "x": 83.33333333333334,
+          "width": 16.666666666666664,
+          "height": 15.789473684210526
+        }
+      },
+      {
+        "name": "NAPZ",
+        "type": "container",
+        "col": 30,
+        "row": 11,
+        "colspan": 6,
+        "rowspan": 3,
+        "bounds": {
+          "y": 57.89473684210527,
+          "x": 83.33333333333334,
+          "width": 16.666666666666664,
+          "height": 15.789473684210526
+        }
+      },
+      {
+        "name": "QsJRfm",
+        "type": "sn-layout-container",
+        "col": 0,
+        "row": 0,
+        "colspan": 36,
+        "rowspan": 2,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 100,
+          "height": 10.526315789473683
         }
       }
     ],
@@ -92,7 +162,7 @@
       }
     },
     "gridMode": "edit",
-    "gridResolution": "small",
+    "gridResolution": "large",
     "labelExpression": {
       "qStringExpression": {
         "qExpr": "='Periodic Data ('&Date(Floor(Min(sample_ts)))& ' - '&Date(Floor(max(sample_ts))) &')'&' - ESN# ' &only(esn)"
@@ -102,7 +172,7 @@
       "extendable": true,
       "sheetMode": "RESPONSIVE"
     },
-    "height": 142,
+    "height": 101,
     "components": [
       {
         "key": "general",
@@ -114,13 +184,38 @@
           }
         }
       }
-    ]
+    ],
+    "actions": [
+      {
+        "actionLabel": "",
+        "actionType": "clearField",
+        "bookmark": "",
+        "field": "dataset",
+        "variable": "",
+        "showSystemVariables": false,
+        "softLock": false,
+        "value": "",
+        "cId": "xEBaY"
+      },
+      {
+        "actionLabel": "",
+        "actionType": "selectValues",
+        "bookmark": "",
+        "field": "dataset",
+        "variable": "",
+        "showSystemVariables": false,
+        "softLock": false,
+        "value": "PERIODIC_DATA",
+        "cId": "JrvCAQ"
+      }
+    ],
+    "customRowBase": 24
   },
   "qChildren": [
     {
       "qProperty": {
         "qInfo": {
-          "qId": "pRrkGAw",
+          "qId": "BSbpe",
           "qType": "container"
         },
         "qMetaDef": {},
@@ -129,10 +224,10 @@
             "externalReference": {
               "masterId": "2e13d803-c738-451a-be24-a40a21483bce",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
-              "viewId": "65b0cf0bf62eb8a308f81ed8"
+              "viewId": "65c20ab5f2eb25c949fc753a"
             },
             "label": "Event Codes Breakdown",
-            "refId": "hssMLj",
+            "refId": "nqyXWfk",
             "type": "externalChild"
           }
         ],
@@ -168,7 +263,7 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "PnpBKhz",
+          "qId": "BkYSg",
           "qType": "container"
         },
         "qMetaDef": {},
@@ -177,10 +272,10 @@
             "externalReference": {
               "masterId": "65b50c85-a088-4bd6-880c-d47f5b82c860",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
-              "viewId": "65b0cf0bf62eb8a308f81ed8"
+              "viewId": "65c20ab5f2eb25c949fc753a"
             },
             "label": "Battery Voltage Trend (V)",
-            "refId": "kkZYpT",
+            "refId": "mamNEG",
             "type": "externalChild"
           }
         ],
@@ -216,7 +311,7 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "mNYBet",
+          "qId": "TffcSbF",
           "qType": "container"
         },
         "qMetaDef": {},
@@ -225,10 +320,10 @@
             "externalReference": {
               "masterId": "2e0a2bf6-8666-4e33-a152-f7163698d58b",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
-              "viewId": "65b0cf0bf62eb8a308f81ed8"
+              "viewId": "65c20ab5f2eb25c949fc753a"
             },
             "label": "Fuel Consumption (L)",
-            "refId": "yCxJJnJ",
+            "refId": "eYDjxD",
             "type": "externalChild"
           }
         ],
@@ -264,7 +359,7 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "QJrDW",
+          "qId": "wZVuUr",
           "qType": "container"
         },
         "qMetaDef": {},
@@ -273,10 +368,10 @@
             "externalReference": {
               "masterId": "29665407-7c50-4607-a149-b5997d9ba9c0",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
-              "viewId": "65b0cf0bf62eb8a308f81ed8"
+              "viewId": "65c20ab5f2eb25c949fc753a"
             },
             "label": "Fuel Level (%)",
-            "refId": "GHuHqE",
+            "refId": "gXqmpjm",
             "type": "externalChild"
           }
         ],
@@ -312,7 +407,7 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "mEJKn",
+          "qId": "gjeLMeQ",
           "qType": "container"
         },
         "qMetaDef": {},
@@ -321,10 +416,10 @@
             "externalReference": {
               "masterId": "3a6a3017-8cd6-49f8-bb42-0833b9e20321",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
-              "viewId": "65b0cf0bf62eb8a308f81ed8"
+              "viewId": "65c20ab5f2eb25c949fc753a"
             },
             "label": "Bobcat Instant Data",
-            "refId": "pRDwLY",
+            "refId": "jvdWp",
             "type": "externalChild"
           }
         ],
@@ -356,6 +451,342 @@
         "hasExternalChildren": true
       },
       "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "YucjFXU",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "a41571a7-d562-4df2-bf87-13a5ecfaee7a",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Average Internal Battery Voltage",
+            "refId": "SYWhj",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "JWmseH",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "eb9a5f44-c02d-4cfe-b277-a2c599d01ae7",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Average Machine Battery Voltage",
+            "refId": "dWbnj",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "xdEPfC",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "f7c471ac-5163-473f-83eb-31accdb09091",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Average DEF Level",
+            "refId": "Hcmksu",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "NAPZ",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "a6f2b968-265c-426f-a1fc-98c73cb7c809",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Average Fuel Level",
+            "refId": "xuRKw",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "QsJRfm",
+          "qType": "sn-layout-container"
+        },
+        "qMetaDef": {},
+        "objects": [
+          {
+            "childRefId": "paJZyrfJ",
+            "condition": {
+              "qValueExpression": {}
+            },
+            "label": {
+              "qStringExpression": {
+                "qExpr": "'Equipment ID (Serial No)'"
+              }
+            },
+            "bounds": {
+              "height": 100,
+              "width": 11.11111,
+              "x": 0.5,
+              "y": 0
+            }
+          },
+          {
+            "childRefId": "JphXrpy",
+            "condition": {
+              "qValueExpression": {}
+            },
+            "label": {
+              "qStringExpression": {
+                "qExpr": "='Select Custom Dates or Predefined Dates Range'"
+              }
+            },
+            "bounds": {
+              "height": 100,
+              "width": 36.11111,
+              "x": 15,
+              "y": 0
+            }
+          },
+          {
+            "childRefId": "puqvrGpt",
+            "condition": {
+              "qValueExpression": {}
+            },
+            "label": "Time Zone",
+            "bounds": {
+              "height": 100,
+              "width": 10,
+              "x": 55,
+              "y": 0
+            }
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "components": [],
+        "constrainToContainer": true,
+        "showGridLines": true,
+        "gridRowCount": 24,
+        "gridColumnCount": 36,
+        "snapToGrid": true,
+        "visualization": "sn-layout-container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "childRefId": "/childRefId"
+          }
+        },
+        "version": "3.1.4",
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "layout-container",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "IconDefinition": {},
+          "name": "Layout container",
+          "description": "The layout container object has a canvas that can hold multiple objects. In this container you can freely move objects around, as well as position the objects on top of each other or overlapping.",
+          "template": "sn-layout-container",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "version": "3.2.1",
+          "author": "QlikTech International AB",
+          "type": "visualization",
+          "supernova": true,
+          "bundle": {
+            "id": "qlik-dashboard-bundle",
+            "name": "Qlik Dashboard bundle",
+            "description": "This is a set of supported objects that will facilitate dashboard creation in Qlik Sense. These can be used in addition to the objects found under \"Charts\".\n\nFor limitations and support conditions, see the documentation."
+          },
+          "installer": "QlikExtensionBundler",
+          "folder": "_dashboard-bundle"
+        },
+        "appId": "f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec"
+      },
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "727e15cc-3cb4-429a-acd2-3e28ef034cee",
+              "qType": "childObject"
+            },
+            "qExtendsId": "8f1a3d7c-2925-4e65-b65b-40975e3301dd",
+            "qMetaDef": {},
+            "childRefId": "paJZyrfJ"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "029bbb6a-6841-4a35-9db3-c4c5f0bac272",
+              "qType": "childObject"
+            },
+            "qExtendsId": "86f3e77a-ca0f-44ad-aed8-9b625c6f1fd3",
+            "qMetaDef": {},
+            "childRefId": "JphXrpy"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "7a450e95-0f67-4f01-b918-02cb81ec06cf",
+              "qType": "childObject"
+            },
+            "qExtendsId": "f1b661bd-1c53-4315-835f-46fafe6a8de8",
+            "qMetaDef": {},
+            "childRefId": "puqvrGpt"
+          },
+          "qChildren": []
+        }
+      ]
     }
   ]
 }

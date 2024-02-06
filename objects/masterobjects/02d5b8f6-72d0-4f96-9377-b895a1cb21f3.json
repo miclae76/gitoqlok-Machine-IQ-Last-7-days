@@ -500,13 +500,13 @@
       "zoomLimitSwitch": true,
       "zoomLimit": {
         "range": [
-          0,
+          14,
           17
         ]
       },
       "panLimitSwitch": false,
       "panLimits": null,
-      "showDebugInfo": false,
+      "showDebugInfo": true,
       "labelColoring": "auto"
     },
     "autoZoomOnSelection": true,

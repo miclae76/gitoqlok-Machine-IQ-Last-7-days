@@ -21,7 +21,7 @@
       "rtl": false,
       "theme": "card",
       "disableCellNavMenu": false,
-      "chartAnimations": true,
+      "chartAnimations": false,
       "presets": [
         {
           "id": "default"

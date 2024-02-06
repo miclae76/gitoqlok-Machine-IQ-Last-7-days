@@ -23,3 +23,5 @@ Search Include
     fault_code_id,
     fault_name
 ;
+
+tag fields TimeScope, TimeZone, dataset with '$hidden';

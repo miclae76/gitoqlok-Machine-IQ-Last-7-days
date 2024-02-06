@@ -12,49 +12,133 @@
     "thumbnail": {
       "qStaticContentUrlDef": {}
     },
-    "columns": 24,
-    "rows": 12,
+    "columns": 36,
+    "rows": 18,
     "cells": [
       {
-        "name": "mVEKP",
+        "name": "trmQcgJ",
         "type": "container",
         "col": 0,
         "row": 0,
-        "colspan": 12,
-        "rowspan": 12,
+        "colspan": 18,
+        "rowspan": 8,
         "bounds": {
           "y": 0,
           "x": 0,
           "width": 50,
-          "height": 100
+          "height": 44.44444444444444
         }
       },
       {
-        "name": "tAeVFWp",
+        "name": "GVXbQ",
         "type": "container",
-        "col": 12,
+        "col": 18,
         "row": 0,
-        "colspan": 12,
+        "colspan": 18,
         "rowspan": 2,
         "bounds": {
           "y": 0,
           "x": 50,
           "width": 50,
-          "height": 16.666666666666664
+          "height": 11.11111111111111
         }
       },
       {
-        "name": "jJJdD",
+        "name": "mxvJRx",
         "type": "container",
-        "col": 12,
+        "col": 18,
         "row": 2,
-        "colspan": 12,
+        "colspan": 18,
         "rowspan": 2,
         "bounds": {
-          "y": 16.666666666666664,
+          "y": 11.11111111111111,
           "x": 50,
           "width": 50,
-          "height": 16.666666666666664
+          "height": 11.11111111111111
+        }
+      },
+      {
+        "name": "ajuhaM",
+        "type": "container",
+        "col": 18,
+        "row": 6,
+        "colspan": 9,
+        "rowspan": 2,
+        "bounds": {
+          "y": 33.33333333333333,
+          "x": 50,
+          "width": 25,
+          "height": 11.11111111111111
+        }
+      },
+      {
+        "name": "dFDz",
+        "type": "container",
+        "col": 27,
+        "row": 6,
+        "colspan": 9,
+        "rowspan": 2,
+        "bounds": {
+          "y": 33.33333333333333,
+          "x": 75,
+          "width": 25,
+          "height": 11.11111111111111
+        }
+      },
+      {
+        "name": "jThXTF",
+        "type": "container",
+        "col": 18,
+        "row": 4,
+        "colspan": 9,
+        "rowspan": 2,
+        "bounds": {
+          "y": 22.22222222222222,
+          "x": 50,
+          "width": 25,
+          "height": 11.11111111111111
+        }
+      },
+      {
+        "name": "XpJzZ",
+        "type": "container",
+        "col": 27,
+        "row": 4,
+        "colspan": 9,
+        "rowspan": 2,
+        "bounds": {
+          "y": 22.22222222222222,
+          "x": 75,
+          "width": 25,
+          "height": 11.11111111111111
+        }
+      },
+      {
+        "name": "dHaY",
+        "type": "container",
+        "col": 0,
+        "row": 13,
+        "colspan": 36,
+        "rowspan": 5,
+        "bounds": {
+          "y": 72.22222222222221,
+          "x": 0,
+          "width": 100,
+          "height": 27.77777777777778
+        }
+      },
+      {
+        "name": "QRTemSd",
+        "type": "container",
+        "col": 0,
+        "row": 8,
+        "colspan": 36,
+        "rowspan": 5,
+        "bounds": {
+          "y": 44.44444444444444,
+          "x": 0,
+          "width": 100,
+          "height": 27.77777777777778
         }
       }
     ],
@@ -64,17 +148,41 @@
       }
     },
     "customRowBase": 12,
-    "gridResolution": "small",
+    "gridResolution": "large",
     "layoutOptions": {
       "mobileLayout": "LIST"
     },
-    "gridMode": "edit"
+    "gridMode": "edit",
+    "actions": [
+      {
+        "actionLabel": "",
+        "actionType": "clearField",
+        "bookmark": "",
+        "field": "dataset",
+        "variable": "",
+        "showSystemVariables": false,
+        "softLock": false,
+        "value": "",
+        "cId": "NPuYB"
+      },
+      {
+        "actionLabel": "",
+        "actionType": "selectValues",
+        "bookmark": "",
+        "field": "dataset",
+        "variable": "",
+        "showSystemVariables": false,
+        "softLock": false,
+        "value": "EQ_LOCATIONS",
+        "cId": "BFqeDvW"
+      }
+    ]
   },
   "qChildren": [
     {
       "qProperty": {
         "qInfo": {
-          "qId": "mVEKP",
+          "qId": "trmQcgJ",
           "qType": "container"
         },
         "qMetaDef": {},
@@ -83,10 +191,10 @@
             "externalReference": {
               "masterId": "6a940cc5-3865-4ed2-9fcf-6929089abe69",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
-              "viewId": "65b0cf0bf62eb8a308f81ed8"
+              "viewId": "65c20ab5f2eb25c949fc753a"
             },
             "label": "Asset Locations",
-            "refId": "DrumTs",
+            "refId": "ZPAcw",
             "type": "externalChild"
           }
         ],
@@ -122,7 +230,7 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "tAeVFWp",
+          "qId": "GVXbQ",
           "qType": "container"
         },
         "qMetaDef": {},
@@ -131,10 +239,10 @@
             "externalReference": {
               "masterId": "a3193623-ac5e-4ac0-a8aa-21ce2d916fad",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
-              "viewId": "65b0cf0bf62eb8a308f81ed8"
+              "viewId": "65c20ab5f2eb25c949fc753a"
             },
-            "label": "Municipality",
-            "refId": "ByUVMX",
+            "label": "Location Municipality",
+            "refId": "xNJPQ",
             "type": "externalChild"
           }
         ],
@@ -170,7 +278,7 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "jJJdD",
+          "qId": "mxvJRx",
           "qType": "container"
         },
         "qMetaDef": {},
@@ -179,10 +287,298 @@
             "externalReference": {
               "masterId": "10ab7808-e8b6-4603-885b-84449e575ada",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
-              "viewId": "65b0cf0bf62eb8a308f81ed8"
+              "viewId": "65c20ab5f2eb25c949fc753a"
             },
-            "label": "Sub Region",
-            "refId": "hufmPJ",
+            "label": "Location Sub Region",
+            "refId": "VfYhTm",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "ajuhaM",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "57d52f94-9ca4-456d-88b1-8d0fefa9c18f",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Location Latitude",
+            "refId": "RUhGWK",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "dFDz",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "2812f890-36cb-4a14-9789-2ba48ee11fb7",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Location Longitude",
+            "refId": "PzLZLY",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "jThXTF",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "1d8f0efc-b92b-441f-bdca-5687cf7fed70",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Location Country",
+            "refId": "DgeQjGr",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "XpJzZ",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "6f2cf45e-d2a9-44ac-b644-7dcb0d7f07b0",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Location State",
+            "refId": "fNruTpB",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "dHaY",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "3a0b83b0-8368-44b1-ad02-eafc34fd253e",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Location Event Data",
+            "refId": "SUJcUjP",
+            "type": "externalChild"
+          }
+        ],
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "borders": "auto",
+        "showTabs": false,
+        "useDropdown": true,
+        "useScrollButton": true,
+        "showIcons": false,
+        "activeTab": "",
+        "defaultTab": "",
+        "visualization": "container",
+        "qChildListDef": {
+          "qData": {
+            "visualization": "/visualization",
+            "containerChildId": "/containerChildId",
+            "qExtendsId": "/qExtendsId",
+            "title": "/title",
+            "showCondition": "/showCondition"
+          }
+        },
+        "supportRefresh": true,
+        "hasExternalChildren": true
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "QRTemSd",
+          "qType": "container"
+        },
+        "qMetaDef": {},
+        "children": [
+          {
+            "externalReference": {
+              "masterId": "17dec212-d99c-4bec-afea-60b5fd3083ee",
+              "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
+              "viewId": "65c20ab5f2eb25c949fc753a"
+            },
+            "label": "Debounced Location Data",
+            "refId": "kuQUmbW",
             "type": "externalChild"
           }
         ],

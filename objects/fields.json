@@ -1,6 +1,6 @@
 [
   {
-    "qName": "End Date",
+    "qName": "End_Date",
     "qTags": [
       "$key",
       "$numeric",
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "qName": "Start Date",
+    "qName": "Start_Date",
     "qTags": [
       "$key",
       "$numeric",
@@ -28,24 +28,24 @@
     ]
   },
   {
+    "qIsHidden": true,
     "qName": "TimeScope",
     "qTags": [
+      "$hidden",
       "$ascii",
       "$text"
     ],
-    "qSrcTables": [
-      "Predefined_Date_Ranges"
-    ]
+    "qSrcTables": []
   },
   {
+    "qIsHidden": true,
     "qName": "TimeZone",
     "qTags": [
+      "$hidden",
       "$ascii",
       "$text"
     ],
-    "qSrcTables": [
-      "TimeZoneTable"
-    ]
+    "qSrcTables": []
   },
   {
     "qName": "aggregate_ts",
@@ -89,7 +89,6 @@
       "iot_equipment",
       "iot_equipment_status",
       "iot_events",
-      "iot_debounced_location_sessions",
       "iot_fault_sessions",
       "iot_engine_hours_aggregation"
     ]
@@ -122,16 +121,6 @@
     ],
     "qSrcTables": [
       "iot_equipment_status"
-    ]
-  },
-  {
-    "qName": "country",
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
     ]
   },
   {
@@ -192,13 +181,14 @@
     ]
   },
   {
-    "qName": "debounce_distance",
+    "qIsHidden": true,
+    "qName": "dataset",
     "qTags": [
-      "$numeric"
+      "$hidden",
+      "$ascii",
+      "$text"
     ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
+    "qSrcTables": []
   },
   {
     "qName": "def_level",
@@ -227,13 +217,6 @@
     ],
     "qSrcTables": [
       "Devise_Association_History"
-    ]
-  },
-  {
-    "qName": "end_ts",
-    "qTags": [],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
     ]
   },
   {
@@ -443,54 +426,6 @@
     ]
   },
   {
-    "qName": "last_ts_location",
-    "qTags": [
-      "$numeric",
-      "$timestamp"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
-    "qName": "last_update_ts",
-    "qTags": [
-      "$numeric",
-      "$timestamp"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
-    "qName": "latitude",
-    "qTags": [
-      "$numeric"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
-    "qName": "location_id",
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
-    "qName": "longitude",
-    "qTags": [
-      "$numeric"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
     "qName": "machine_battery_voltage",
     "qTags": [
       "$numeric"
@@ -504,15 +439,6 @@
     "qTags": [],
     "qSrcTables": [
       "iot_events"
-    ]
-  },
-  {
-    "qName": "municipality",
-    "qTags": [
-      "$text"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
     ]
   },
   {
@@ -576,25 +502,6 @@
     ]
   },
   {
-    "qName": "region",
-    "qTags": [
-      "$text"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
-    "qName": "s2_cell_id_12",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
     "qName": "sample_ts",
     "qTags": [
       "$numeric",
@@ -635,23 +542,6 @@
     ]
   },
   {
-    "qName": "start_engine_hours",
-    "qTags": [],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
-    "qName": "start_ts",
-    "qTags": [
-      "$numeric",
-      "$timestamp"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
-    ]
-  },
-  {
     "qName": "status",
     "qTags": [
       "$ascii",
@@ -659,15 +549,6 @@
     ],
     "qSrcTables": [
       "iot_fault_sessions"
-    ]
-  },
-  {
-    "qName": "sub_region",
-    "qTags": [
-      "$text"
-    ],
-    "qSrcTables": [
-      "iot_debounced_location_sessions"
     ]
   },
   {

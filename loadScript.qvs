@@ -189,6 +189,7 @@ WHERE "sample_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;
 
 
 ///$tab 30_Equipment_Locations
+/*
 TRACE *** Load iot_debounced_location_sessions ***;
 
 [iot_debounced_location_sessions]:
@@ -220,7 +221,7 @@ FROM iotv3."iot_debounced_location_sessions_weekly"
 INNER JOIN iotv3."iot_addresses" 
 ON  "address_id" = "s2_cell_id_12"
 ;
-
+*/
 
 
 
@@ -267,6 +268,17 @@ WHERE "aggregate_ts" > CURRENT_DATE - INTERVAL '30 DAY' ;
 ///$tab 980_Design_Tables
 TRACE *** Create static tables ***;
 
+//Static Table to send param to trigger Subroutines in ODAG Template
+OdagSectionTable:
+LOAD * INLINE [
+dataset
+RUN_DATA
+RUN_USAGE_SUMMARY
+PERIODIC_DATA
+FAULT_DATA
+EQ_LOCATIONS
+];
+
 //Static table to enable time zone selection for TS adjsuted 
 TimeZoneTable:
 LOAD * INLINE [
@@ -285,44 +297,44 @@ WET
 Predefined_Date_Ranges:
 LOAD 
     'Last 7 days' 		AS TimeScope, 
-    Date(Today()-7) 	AS "Start Date",
-    Today() 			AS "End Date" 
+    Date(Today()-7,' YYYY-MM-DD') 	AS "Start_Date",
+    Date(Today(), ' YYYY-MM-DD') 	AS "End_Date" 
 AutoGenerate 1;
 
 LOAD 
     'Last 30 days' 		AS TimeScope, 
-    Date(Today()-30) 	AS "Start Date",
-    Today() 			AS "End Date" 
+    Date(Today()-30,' YYYY-MM-DD') 	AS "Start_Date",
+   Date(Today(), ' YYYY-MM-DD') 			AS "End_Date" 
 AutoGenerate 1;
 
 LOAD 
     'Last 14 days' 		AS TimeScope, 
-    Date(Today()-14) 	AS "Start Date",
-    Today() 			AS "End Date" 
+    Date(Today()-14,' YYYY-MM-DD') 	AS "Start_Date",
+    Date(Today(), ' YYYY-MM-DD')  			AS "End_Date" 
 AutoGenerate 1;
 
 LOAD 
     'Last 90 days' 		AS TimeScope, 
-    Date(Today()-90) 	AS "Start Date",
-    Today() 			AS "End Date" 
+    Date(Today()-90,' YYYY-MM-DD') 	AS "Start_Date",
+   Date(Today(), ' YYYY-MM-DD') 			AS "End_Date" 
 AutoGenerate 1;
 
 LOAD 
     'Current Month' 				AS TimeScope, 
-    Date(MonthStart(Today())) 		AS "Start Date",
-    Today() 						AS "End Date" 
+    Date(MonthStart(Today()),' YYYY-MM-DD') 		AS "Start_Date",
+    Date(Today(), ' YYYY-MM-DD') 						AS "End_Date" 
 AutoGenerate 1;
 
 LOAD 
     'Current Year' 					AS TimeScope, 
-    Date(Makedate(year(Today()))) 	AS "Start Date",
-    Today() 						AS "End Date" 
+    Date(Makedate(year(Today())),' YYYY-MM-DD') 	AS "Start_Date",
+    Date(Today(), ' YYYY-MM-DD')  						AS "End_Date" 
 AutoGenerate 1;
 
 LOAD 
     'Last Year' 					AS TimeScope, 
-    Date(MonthStart(Today())) 		AS "Start Date",
-    Date(Makedate(year(Today()))-1) AS "End Date" 
+    Date(MonthStart(Today()),' YYYY-MM-DD') 		AS "Start_Date",
+    Date(Makedate(year(Today()))-1,' YYYY-MM-DD') AS "End_Date" 
 AutoGenerate 1;
 
 
@@ -332,13 +344,26 @@ TRACE *** Generate Calendar for date picking (From, To) ***;
 
 CalendarFromTable:
 LOAD 
-	Date(MakeDate(Year(Today())-1) + RecNo() - 1) AS "Start Date"
+	Date(MakeDate(Year(Today())-1) + RecNo() - 1,' YYYY-MM-DD') AS "Start_Date"
 AutoGenerate Today() - MakeDate(Year(Today())-1) + RecNo() + 1;
 
 CalendarToTable:
 LOAD 
-	Date(MakeDate(Year(Today())-1) + RecNo() - 1) AS "End Date"
+	Date(MakeDate(Year(Today())-1) + RecNo() - 1,' YYYY-MM-DD') AS "End_Date"
 AutoGenerate Today() - MakeDate(Year(Today())-1) + RecNo() + 1;
+
+temp_custom:
+NoConcatenate
+LOAD *
+resident CalendarFromTable;
+join (temp_custom)
+Load * 
+resident CalendarToTable;
+
+// Append dates combinations to allow custom dates range
+Concatenate(Predefined_Date_Ranges)
+LOAD 'Custom' AS TimeScope, * Resident temp_custom; 
+drop Table temp_custom;
 
 
 ///$tab 990_Search
@@ -366,6 +391,7 @@ Search Include
     fault_code_id,
     fault_name
 ;
-    
+
+tag fields TimeScope, TimeZone, dataset with '$hidden';
 ///$tab 999_EXIT
 EXIT SCRIPT;
