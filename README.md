@@ -12,9 +12,8 @@ Utilization|
 Locations|
 ESN Navigation|
 Periodic Data|
-Equipment Overview - Last 7 days|
+Equipment Overview|
 Equipment Locations Single|
-My new sheet (1)|
 Run Data|
 
 

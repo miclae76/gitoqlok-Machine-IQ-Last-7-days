@@ -5,7 +5,7 @@
       "qType": "sheet"
     },
     "qMetaDef": {
-      "title": "Equipment Overview - Last 7 days",
+      "title": "Equipment Overview",
       "description": ""
     },
     "rank": -2,
@@ -257,13 +257,13 @@
         "name": "SXcyF",
         "type": "sn-layout-container",
         "col": 0,
-        "row": 1,
-        "colspan": 30,
+        "row": 0,
+        "colspan": 36,
         "rowspan": 2,
         "bounds": {
-          "y": 5.555555555555555,
+          "y": 0,
           "x": 0,
-          "width": 83.33333333333334,
+          "width": 100,
           "height": 11.11111111111111
         }
       },
@@ -321,6 +321,30 @@
             "color": "#ffffff"
           }
         }
+      }
+    ],
+    "actions": [
+      {
+        "actionLabel": "",
+        "actionType": "clearField",
+        "bookmark": "",
+        "field": "dataset",
+        "variable": "",
+        "showSystemVariables": false,
+        "softLock": false,
+        "value": "",
+        "cId": "aWxKKJ"
+      },
+      {
+        "actionLabel": "",
+        "actionType": "selectValues",
+        "bookmark": "",
+        "field": "dataset",
+        "variable": "",
+        "showSystemVariables": false,
+        "softLock": false,
+        "value": "FULL",
+        "cId": "RLPBdxy"
       }
     ]
   },
@@ -3451,7 +3475,7 @@
           "story": "",
           "websiteUrl": "",
           "sameWindow": false,
-          "odagLink": "65af8adb19f5ff73e78ca0bb"
+          "odagLink": "65c39b15b5065916f579cadc"
         },
         "useEnabledCondition": true,
         "enabledCondition": {

@@ -17,9 +17,9 @@
           "qUrl": "/api/v1/apps/f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec/media/files/bobcat_logo_red.png"
         }
       },
-      "sheetLogoPosition": "left",
+      "sheetLogoPosition": "right",
       "rtl": false,
-      "theme": "card",
+      "theme": "breeze",
       "disableCellNavMenu": false,
       "chartAnimations": false,
       "presets": [

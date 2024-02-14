@@ -46,15 +46,15 @@
       {
         "name": "vaqTCYY",
         "type": "action-button",
-        "col": 30,
+        "col": 26,
         "row": 0,
-        "colspan": 6,
-        "rowspan": 1,
+        "colspan": 10,
+        "rowspan": 2,
         "bounds": {
           "y": 0,
-          "x": 83.33333333333334,
-          "width": 16.666666666666664,
-          "height": 5.555555555555555
+          "x": 72.22222222222221,
+          "width": 27.77777777777778,
+          "height": 11.11111111111111
         }
       },
       {
@@ -166,7 +166,39 @@
         }
       }
     ],
-    "navPoints": []
+    "navPoints": [
+      {
+        "info": {
+          "id": "kmBkaj"
+        },
+        "title": "MIQ - Single Asset",
+        "odagLinkRefID": "65c39b15b5065916f579cadc"
+      }
+    ],
+    "actions": [
+      {
+        "actionLabel": "",
+        "actionType": "clearField",
+        "bookmark": "",
+        "field": "dataset",
+        "variable": "",
+        "showSystemVariables": false,
+        "softLock": false,
+        "value": "",
+        "cId": "JLLvEwe"
+      },
+      {
+        "actionLabel": "",
+        "actionType": "selectValues",
+        "bookmark": "",
+        "field": "dataset",
+        "variable": "",
+        "showSystemVariables": false,
+        "softLock": false,
+        "value": "FULL",
+        "cId": "WanmR"
+      }
+    ]
   },
   "qChildren": [
     {
@@ -1669,7 +1701,7 @@
           "story": "",
           "websiteUrl": "",
           "sameWindow": false,
-          "odagLink": "65af8adb19f5ff73e78ca0bb"
+          "odagLink": "65c39b15b5065916f579cadc"
         },
         "useEnabledCondition": true,
         "enabledCondition": {
@@ -2111,7 +2143,7 @@
           },
           "quarantine": {}
         },
-        "hash": 0.8843214023501351,
+        "hash": 0.7223674565754792,
         "appId": "f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec"
       },
       "qChildren": []

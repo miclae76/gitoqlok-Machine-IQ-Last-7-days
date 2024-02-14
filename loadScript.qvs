@@ -164,7 +164,7 @@ LOAD
 	"cumulative_engine_hours",
 	"def_level";
 SELECT 
-	--"esn",
+	"esn",
 	--"event_id",
 	--"event_type",
 	"asset_id",
@@ -189,7 +189,6 @@ WHERE "sample_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;
 
 
 ///$tab 30_Equipment_Locations
-/*
 TRACE *** Load iot_debounced_location_sessions ***;
 
 [iot_debounced_location_sessions]:
@@ -221,7 +220,7 @@ FROM iotv3."iot_debounced_location_sessions_weekly"
 INNER JOIN iotv3."iot_addresses" 
 ON  "address_id" = "s2_cell_id_12"
 ;
-*/
+
 
 
 
@@ -277,6 +276,7 @@ RUN_USAGE_SUMMARY
 PERIODIC_DATA
 FAULT_DATA
 EQ_LOCATIONS
+FULL
 ];
 
 //Static table to enable time zone selection for TS adjsuted 
@@ -333,8 +333,8 @@ AutoGenerate 1;
 
 LOAD 
     'Last Year' 					AS TimeScope, 
-    Date(MonthStart(Today()),' YYYY-MM-DD') 		AS "Start_Date",
-    Date(Makedate(year(Today()))-1,' YYYY-MM-DD') AS "End_Date" 
+    Date(Makedate(year(Today())-1),' YYYY-MM-DD')	AS "Start_Date",
+    Date(Makedate(year(Today())-1, 12, 31),' YYYY-MM-DD') AS "End_Date" 
 AutoGenerate 1;
 
 
@@ -392,6 +392,6 @@ Search Include
     fault_name
 ;
 
-tag fields TimeScope, TimeZone, dataset with '$hidden';
+tag fields TimeScope, TimeZone/*, dataset*/ with '$hidden';
 ///$tab 999_EXIT
 EXIT SCRIPT;

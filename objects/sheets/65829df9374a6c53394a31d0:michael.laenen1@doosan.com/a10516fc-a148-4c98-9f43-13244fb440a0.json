@@ -518,19 +518,19 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "dHaY",
+          "qId": "QRTemSd",
           "qType": "container"
         },
         "qMetaDef": {},
         "children": [
           {
             "externalReference": {
-              "masterId": "3a0b83b0-8368-44b1-ad02-eafc34fd253e",
+              "masterId": "17dec212-d99c-4bec-afea-60b5fd3083ee",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
               "viewId": "65c20ab5f2eb25c949fc753a"
             },
-            "label": "Location Event Data",
-            "refId": "SUJcUjP",
+            "label": "Debounced Location Data",
+            "refId": "kuQUmbW",
             "type": "externalChild"
           }
         ],
@@ -566,19 +566,19 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "QRTemSd",
+          "qId": "dHaY",
           "qType": "container"
         },
         "qMetaDef": {},
         "children": [
           {
             "externalReference": {
-              "masterId": "17dec212-d99c-4bec-afea-60b5fd3083ee",
+              "masterId": "3a0b83b0-8368-44b1-ad02-eafc34fd253e",
               "app": "e1a32c6c-6708-4c01-9fe1-72041a4e8875",
               "viewId": "65c20ab5f2eb25c949fc753a"
             },
-            "label": "Debounced Location Data",
-            "refId": "kuQUmbW",
+            "label": "Location Event Data",
+            "refId": "SUJcUjP",
             "type": "externalChild"
           }
         ],

@@ -10,6 +10,7 @@ RUN_USAGE_SUMMARY
 PERIODIC_DATA
 FAULT_DATA
 EQ_LOCATIONS
+FULL
 ];
 
 //Static table to enable time zone selection for TS adjsuted 
@@ -66,8 +67,8 @@ AutoGenerate 1;
 
 LOAD 
     'Last Year' 					AS TimeScope, 
-    Date(MonthStart(Today()),' YYYY-MM-DD') 		AS "Start_Date",
-    Date(Makedate(year(Today()))-1,' YYYY-MM-DD') AS "End_Date" 
+    Date(Makedate(year(Today())-1),' YYYY-MM-DD')	AS "Start_Date",
+    Date(Makedate(year(Today())-1, 12, 31),' YYYY-MM-DD') AS "End_Date" 
 AutoGenerate 1;
 
 

@@ -23,7 +23,7 @@ LOAD
 	"cumulative_engine_hours",
 	"def_level";
 SELECT 
-	--"esn",
+	"esn",
 	--"event_id",
 	--"event_type",
 	"asset_id",
