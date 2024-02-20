@@ -34,12 +34,12 @@
         "type": "piechart",
         "col": 0,
         "row": 3,
-        "colspan": 12,
+        "colspan": 9,
         "rowspan": 6,
         "bounds": {
           "y": 16.666666666666664,
           "x": 0,
-          "width": 33.33333333333333,
+          "width": 25,
           "height": 33.33333333333333
         }
       },
@@ -47,69 +47,55 @@
         "name": "vaqTCYY",
         "type": "action-button",
         "col": 26,
-        "row": 0,
+        "row": 1,
         "colspan": 10,
-        "rowspan": 2,
+        "rowspan": 1,
         "bounds": {
-          "y": 0,
+          "y": 5.555555555555555,
           "x": 72.22222222222221,
           "width": 27.77777777777778,
-          "height": 11.11111111111111
+          "height": 5.555555555555555
         }
       },
       {
         "name": "gjAVrFp",
         "type": "barchart",
-        "col": 24,
+        "col": 27,
         "row": 3,
-        "colspan": 12,
+        "colspan": 9,
         "rowspan": 6,
         "bounds": {
           "y": 16.666666666666664,
-          "x": 66.66666666666666,
-          "width": 33.33333333333333,
+          "x": 75,
+          "width": 25,
           "height": 33.33333333333333
-        }
-      },
-      {
-        "name": "Ppbr",
-        "type": "filterpane",
-        "col": 19,
-        "row": 0,
-        "colspan": 4,
-        "rowspan": 2,
-        "bounds": {
-          "y": 0,
-          "x": 52.77777777777778,
-          "width": 11.11111111111111,
-          "height": 11.11111111111111
         }
       },
       {
         "name": "qXEpk",
         "type": "piechart",
-        "col": 12,
+        "col": 9,
         "row": 3,
-        "colspan": 12,
+        "colspan": 9,
         "rowspan": 6,
         "bounds": {
           "y": 16.666666666666664,
-          "x": 33.33333333333333,
-          "width": 33.33333333333333,
+          "x": 25,
+          "width": 25,
           "height": 33.33333333333333
         }
       },
       {
         "name": "JJpuZUH",
         "type": "filterpane",
-        "col": 5,
+        "col": 6,
         "row": 0,
-        "colspan": 13,
+        "colspan": 19,
         "rowspan": 2,
         "bounds": {
           "y": 0,
-          "x": 13.88888888888889,
-          "width": 36.11111111111111,
+          "x": 16.666666666666664,
+          "width": 52.77777777777778,
           "height": 11.11111111111111
         }
       },
@@ -132,13 +118,27 @@
         "type": "filterpane",
         "col": 0,
         "row": 0,
-        "colspan": 4,
+        "colspan": 5,
         "rowspan": 2,
         "bounds": {
           "y": 0,
           "x": 0,
-          "width": 11.11111111111111,
+          "width": 13.88888888888889,
           "height": 11.11111111111111
+        }
+      },
+      {
+        "name": "NEYsyG",
+        "type": "piechart",
+        "col": 18,
+        "row": 3,
+        "colspan": 9,
+        "rowspan": 6,
+        "bounds": {
+          "y": 16.666666666666664,
+          "x": 50,
+          "width": 25,
+          "height": 33.33333333333333
         }
       }
     ],
@@ -160,8 +160,9 @@
         "bgColor": {
           "useExpression": false,
           "color": {
-            "index": 1,
-            "color": "#ffffff"
+            "index": -1,
+            "color": "#595957",
+            "alpha": 1
           }
         }
       }
@@ -601,7 +602,13 @@
               },
               "qTotalLabel": {},
               "qCalcCond": {},
-              "qAttributeExpressions": [],
+              "qAttributeExpressions": [
+                {
+                  "qExpression": "if(equipment_last_update_ts < max(Start_Date), lightred())",
+                  "qAttribute": true,
+                  "id": "cellForegroundColor"
+                }
+              ],
               "qAttributeDimensions": [],
               "qCalcCondition": {
                 "qCond": {},
@@ -1205,7 +1212,38 @@
         "disableNavMenu": false,
         "showDetails": true,
         "showDetailsExpression": false,
-        "components": [],
+        "components": [
+          {
+            "key": "general",
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "13px"
+              }
+            }
+          },
+          {
+            "key": "axis",
+            "axis": {
+              "label": {
+                "name": {
+                  "fontFamily": "Roboto, sans-serif"
+                }
+              },
+              "title": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
+          },
+          {
+            "key": "value",
+            "label": {
+              "value": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
+          }
+        ],
         "totals": {
           "show": false,
           "position": "noTotals",
@@ -1554,25 +1592,46 @@
         "version": "1.26.7",
         "components": [
           {
-            "key": "slices",
-            "style": {
-              "strokeWidth": "medium",
-              "strokeColor": {
-                "index": -1,
-                "color": "#FFFFFF"
-              },
-              "cornerRadius": 4.1,
-              "innerRadius": 0.55
+            "key": "general",
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "13px"
+              }
             }
           },
           {
-            "key": "general"
+            "key": "axis",
+            "axis": {
+              "label": {
+                "name": {
+                  "fontFamily": "Roboto, sans-serif"
+                }
+              },
+              "title": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
           },
           {
-            "key": "axis"
+            "key": "value",
+            "label": {
+              "value": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
           },
           {
-            "key": "label"
+            "key": "slices"
+          },
+          {
+            "key": "label",
+            "label": {
+              "name": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "12px"
+              }
+            }
           },
           {
             "key": "legend"
@@ -1658,10 +1717,102 @@
           "qId": "ngnbBp",
           "qType": "filterpane"
         },
-        "qExtendsId": "8f1a3d7c-2925-4e65-b65b-40975e3301dd",
-        "qMetaDef": {}
+        "qMetaDef": {},
+        "showTitles": true,
+        "title": {
+          "qStringExpression": {
+            "qExpr": "='Equipment ID (Serial No)'"
+          }
+        },
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "visualization": "filterpane",
+        "version": "0.17.4",
+        "qChildListDef": {
+          "qData": {}
+        },
+        "masterVersion": 0.96,
+        "components": [
+          {
+            "key": "general",
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "14px",
+                "color": {
+                  "index": 15,
+                  "color": "#ffffff",
+                  "alpha": 1
+                },
+                "fontStyle": []
+              },
+              "subTitle": {
+                "fontFamily": "Roboto, sans-serif"
+              },
+              "footer": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
+          },
+          {
+            "key": "theme",
+            "header": {
+              "fontFamily": "Roboto, sans-serif"
+            },
+            "content": {
+              "fontFamily": "Roboto, sans-serif"
+            }
+          },
+          {
+            "key": "selections"
+          }
+        ]
       },
-      "qChildren": []
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "75f1ce30-db1a-4b51-9e5e-1be7a3b43433",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qLibraryId": "jSKtJ",
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [],
+                "qFieldLabels": [],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": []
+            },
+            "title": {
+              "qStringExpression": {
+                "qExpr": "=if(getpossiblecount(asset_id) > 1, '-- Please Select -- ', Concat(asset_id))"
+              }
+            },
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        }
+      ]
     },
     {
       "qProperty": {
@@ -1706,7 +1857,7 @@
         "useEnabledCondition": true,
         "enabledCondition": {
           "qValueExpression": {
-            "qExpr": "GetSelectedCount(asset_id)=1"
+            "qExpr": "=GetSelectedCount(asset_id)=1 and GetPossibleCount(Start_Date)=1 and GetPossibleCount(End_Date)=1 and GetPossibleCount(TimeScope)=1 and Start_Date <= equipment_last_update_ts"
           }
         },
         "showTitles": false,
@@ -1717,11 +1868,15 @@
         "showDetails": false,
         "showDetailsExpression": false,
         "style": {
-          "label": "Get Data for selected Asset",
+          "label": {
+            "qStringExpression": {
+              "qExpr": "=if(GetSelectedCount(asset_id)=1 and equipment_last_update_ts < max(Start_Date), 'No Data available for this period', 'Generate Report for the selected Asset')"
+            }
+          },
           "showLabel": true,
           "icon": {
             "useIcon": true,
-            "iconType": "database",
+            "iconType": "download",
             "position": "left"
           },
           "font": {
@@ -1732,7 +1887,7 @@
               "color": "#ffffff"
             },
             "colorExpression": "",
-            "size": 0.5,
+            "size": 0.7,
             "sizeFixed": 20,
             "sizeBehavior": "responsive",
             "style": {
@@ -1745,8 +1900,9 @@
           "background": {
             "useColorExpression": false,
             "color": {
-              "index": 6,
-              "color": "#006580"
+              "index": 5,
+              "color": "#ec983d",
+              "alpha": 1
             },
             "colorExpression": "",
             "mode": "none",
@@ -1765,7 +1921,7 @@
             },
             "colorExpression": "",
             "useBorder": true,
-            "radius": 0,
+            "radius": 1,
             "width": 0.09
           }
         },
@@ -2120,15 +2276,33 @@
         "version": "1.26.7",
         "components": [
           {
-            "key": "slices",
-            "style": {
-              "strokeWidth": "none",
-              "strokeColor": {
-                "index": -1,
-                "color": "#FFFFFF"
+            "key": "general",
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "13px"
+              }
+            }
+          },
+          {
+            "key": "axis",
+            "axis": {
+              "label": {
+                "name": {
+                  "fontFamily": "Roboto, sans-serif"
+                }
               },
-              "cornerRadius": 0,
-              "innerRadius": 0.55
+              "title": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
+          },
+          {
+            "key": "value",
+            "label": {
+              "value": {
+                "fontFamily": "Roboto, sans-serif"
+              }
             }
           }
         ],
@@ -2143,7 +2317,7 @@
           },
           "quarantine": {}
         },
-        "hash": 0.7223674565754792,
+        "hash": 0.6150863809605625,
         "appId": "f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec"
       },
       "qChildren": []
@@ -2154,21 +2328,223 @@
           "qId": "JJpuZUH",
           "qType": "filterpane"
         },
-        "qExtendsId": "86f3e77a-ca0f-44ad-aed8-9b625c6f1fd3",
-        "qMetaDef": {}
-      },
-      "qChildren": []
-    },
-    {
-      "qProperty": {
-        "qInfo": {
-          "qId": "Ppbr",
-          "qType": "filterpane"
+        "qMetaDef": {},
+        "showTitles": true,
+        "title": {
+          "qStringExpression": {
+            "qExpr": "='Select Custom Dates or Predefined Dates Range'"
+          }
         },
-        "qExtendsId": "f1b661bd-1c53-4315-835f-46fafe6a8de8",
-        "qMetaDef": {}
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "visualization": "filterpane",
+        "version": "0.17.4",
+        "qChildListDef": {
+          "qData": {}
+        },
+        "masterVersion": 0.96,
+        "components": [
+          {
+            "key": "general",
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "14px",
+                "color": {
+                  "index": 15,
+                  "color": "#ffffff",
+                  "alpha": 1
+                },
+                "fontStyle": []
+              },
+              "subTitle": {
+                "fontFamily": "Roboto, sans-serif"
+              },
+              "footer": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
+          },
+          {
+            "key": "theme",
+            "header": {
+              "fontFamily": "Roboto, sans-serif"
+            },
+            "content": {
+              "fontFamily": "Roboto, sans-serif"
+            }
+          },
+          {
+            "key": "selections"
+          }
+        ]
       },
-      "qChildren": []
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "193b4206-4c49-4217-ae47-16069ec86764",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Start_Date"
+                ],
+                "qFieldLabels": [
+                  "Start Date"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": -1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": []
+            },
+            "title": {
+              "qStringExpression": {
+                "qExpr": "'Start Date : '&Max(Start_Date)"
+              }
+            },
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "04c2aff3-b71b-4f48-90ae-8fce1c390967",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "End_Date"
+                ],
+                "qFieldLabels": [
+                  "End Date"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": -1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false,
+                "cId": "NRbejkg"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": {
+              "qStringExpression": {
+                "qExpr": "'End Date : '&Max(End_Date)"
+              }
+            },
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
+            "visualization": "listbox",
+            "showTitle": true
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "c58d5d98-47dd-426f-b227-4417cf49bd8a",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "TimeScope"
+                ],
+                "qFieldLabels": [
+                  "TimeScope"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "shwpSM"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": {
+              "qStringExpression": {
+                "qExpr": "=if(getpossiblecount(TimeScope)=1, TimeScope, 'Please Select only one range or \"Custom\"')"
+              }
+            },
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
+            "visualization": "listbox",
+            "frequencyMax": null
+          },
+          "qChildren": []
+        }
+      ]
     },
     {
       "qProperty": {
@@ -2397,25 +2773,398 @@
         "version": "1.26.7",
         "components": [
           {
-            "key": "slices",
+            "key": "general",
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "13px"
+              }
+            }
+          },
+          {
+            "key": "axis",
+            "axis": {
+              "label": {
+                "name": {
+                  "fontFamily": "Roboto, sans-serif"
+                }
+              },
+              "title": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
+          },
+          {
+            "key": "value",
+            "label": {
+              "value": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
+          },
+          {
+            "key": "slices"
+          },
+          {
+            "key": "label",
+            "label": {
+              "name": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "12px"
+              }
+            }
+          },
+          {
+            "key": "legend"
+          }
+        ],
+        "qLayoutExclude": {
+          "disabled": {
+            "qExtendsId": "",
+            "refLine": {
+              "refLines": [],
+              "dimRefLines": []
+            },
+            "barGrouping": {
+              "grouping": "grouped"
+            },
+            "orientation": "horizontal",
+            "scrollbar": "miniChart",
+            "scrollStartPos": 0,
+            "gridLine": {
+              "auto": true,
+              "spacing": 2
+            },
+            "dimensionAxis": {
+              "continuousAuto": true,
+              "show": "all",
+              "label": "auto",
+              "dock": "near",
+              "axisDisplayMode": "auto",
+              "maxVisibleItems": 10
+            },
+            "preferContinuousAxis": true,
+            "measureAxis": {
+              "show": "all",
+              "dock": "near",
+              "spacing": 1,
+              "autoMinMax": true,
+              "minMax": "min",
+              "min": 0,
+              "max": 10
+            },
+            "showMiniChartForContinuousAxis": true,
+            "hash": 0.887195335683292
+          },
+          "quarantine": {
+            "conditionalShowHide": {
+              "measures": {
+                "KRLaBS": {
+                  "qCond": {
+                    "qv": ""
+                  },
+                  "qMsg": {
+                    "qv": ""
+                  }
+                }
+              },
+              "dimensions": {
+                "breUGzY": {
+                  "qCond": {
+                    "qv": ""
+                  },
+                  "qMsg": {
+                    "qv": ""
+                  }
+                }
+              }
+            },
+            "supportedAutoMinMax": {
+              "measureAxis.min": 0,
+              "measureAxis.max": 10
+            }
+          }
+        },
+        "appId": "f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec"
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "NEYsyG",
+          "qType": "piechart"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qLibraryId": "6bb1abe7-0874-496d-9ab4-000d312c1fb5",
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [],
+                "qFieldLabels": [],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "mRjkkj",
+                "othersLabel": "Others"
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_COUNTED",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "Count(severity)",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 10,
+                  "qUseThou": 0
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "KRLaBS",
+                "numFormatFromTemplate": true
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              }
+            }
+          ],
+          "qInterColumnSortOrder": [
+            1,
+            0
+          ],
+          "qSuppressMissing": true,
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 10,
+              "qHeight": 500
+            }
+          ],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "columnOrder": [],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "script": "",
+        "showTitles": true,
+        "title": "Active Fault Severity",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "showDisclaimer": true,
+        "donut": {
+          "showAsDonut": true
+        },
+        "dimensionTitle": false,
+        "dataPoint": {
+          "auto": true,
+          "labelMode": "share",
+          "labelValueMode": "arc",
+          "showLabels": true,
+          "showSegmentLabels": false,
+          "showTotalLabels": true
+        },
+        "color": {
+          "auto": true,
+          "mode": "byDimension",
+          "formatting": {
+            "numFormatFromTemplate": true
+          },
+          "useBaseColors": "off",
+          "paletteColor": {
+            "index": 6
+          },
+          "useDimColVal": true,
+          "useMeasureGradient": true,
+          "persistent": false,
+          "expressionIsColor": true,
+          "expressionLabel": "",
+          "measureScheme": "sg",
+          "reverseScheme": false,
+          "dimensionScheme": "12",
+          "autoMinMax": true,
+          "measureMin": 0,
+          "measureMax": 10,
+          "altLabel": "kRBrEz",
+          "byDimDef": {
+            "label": "kRBrEz",
+            "key": "kRBrEz",
+            "type": "libraryItem"
+          }
+        },
+        "legend": {
+          "show": true,
+          "dock": "auto",
+          "showTitle": true
+        },
+        "tooltip": {
+          "auto": true,
+          "hideBasic": false,
+          "chart": {
             "style": {
-              "strokeWidth": "medium",
+              "size": "medium"
+            }
+          },
+          "data": {}
+        },
+        "visualization": "piechart",
+        "version": "1.26.7",
+        "components": [
+          {
+            "key": "general",
+            "style": {
+              "strokeWidth": "none",
               "strokeColor": {
                 "index": -1,
                 "color": "#FFFFFF"
               },
-              "cornerRadius": 4.1,
+              "cornerRadius": 0,
               "innerRadius": 0.55
+            },
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "13px"
+              }
             }
           },
           {
-            "key": "general"
+            "key": "axis",
+            "axis": {
+              "label": {
+                "name": {
+                  "fontFamily": "Roboto, sans-serif"
+                }
+              },
+              "title": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
           },
           {
-            "key": "axis"
+            "key": "value",
+            "label": {
+              "value": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
           },
           {
-            "key": "label"
+            "key": "slices"
+          },
+          {
+            "key": "label",
+            "label": {
+              "name": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "12px"
+              }
+            }
           },
           {
             "key": "legend"

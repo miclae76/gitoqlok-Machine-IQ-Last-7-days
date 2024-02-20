@@ -52,38 +52,6 @@
     ]
   },
   {
-    "qName": "aggregate_ts",
-    "qTags": [
-      "$numeric",
-      "$timestamp"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
-    ]
-  },
-  {
-    "qName": "aggregate_ts_day",
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
-    ]
-  },
-  {
-    "qName": "aggregate_ts_hour_bin",
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
-    ]
-  },
-  {
     "qName": "asset_id",
     "qTags": [
       "$key"
@@ -94,8 +62,7 @@
       "iot_equipment_status",
       "iot_events",
       "iot_debounced_location_sessions",
-      "iot_fault_sessions",
-      "iot_engine_hours_aggregation"
+      "iot_fault_sessions"
     ]
   },
   {
@@ -148,15 +115,6 @@
     ]
   },
   {
-    "qName": "cumulative_engine_hours_final",
-    "qTags": [
-      "$numeric"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
-    ]
-  },
-  {
     "qName": "cumulative_fuel_consumption",
     "qTags": [
       "$numeric"
@@ -196,8 +154,10 @@
     ]
   },
   {
+    "qIsHidden": true,
     "qName": "dataset",
     "qTags": [
+      "$hidden",
       "$ascii",
       "$text"
     ],
@@ -251,15 +211,6 @@
     ]
   },
   {
-    "qName": "engine_hours",
-    "qTags": [
-      "$numeric"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
-    ]
-  },
-  {
     "qName": "equipment_last_update_ts",
     "qTags": [
       "$numeric",
@@ -287,16 +238,6 @@
     ],
     "qSrcTables": [
       "Devise_Association_History"
-    ]
-  },
-  {
-    "qName": "extract_hours",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
     ]
   },
   {
@@ -397,16 +338,6 @@
     ]
   },
   {
-    "qName": "invalid_data_detected",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
-    ]
-  },
-  {
     "qName": "inventory_condition",
     "qTags": [
       "$ascii",
@@ -424,16 +355,6 @@
     ],
     "qSrcTables": [
       "iot_equipment"
-    ]
-  },
-  {
-    "qName": "last_aggregate_ts",
-    "qTags": [
-      "$numeric",
-      "$timestamp"
-    ],
-    "qSrcTables": [
-      "iot_engine_hours_aggregation"
     ]
   },
   {
@@ -515,7 +436,9 @@
   },
   {
     "qName": "machine_state_of_charge",
-    "qTags": [],
+    "qTags": [
+      "$numeric"
+    ],
     "qSrcTables": [
       "iot_events"
     ]
@@ -611,8 +534,7 @@
   {
     "qName": "sample_ts",
     "qTags": [
-      "$numeric",
-      "$timestamp"
+      "$numeric"
     ],
     "qSrcTables": [
       "iot_events"

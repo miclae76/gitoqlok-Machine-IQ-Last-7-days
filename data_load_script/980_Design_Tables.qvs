@@ -17,14 +17,7 @@ FULL
 TimeZoneTable:
 LOAD * INLINE [
 TimeZone
-CET
-CST
-EET
-EST
-MST
-PST
 UTC
-WET
 ];
 
 //Static table to select historical data for on-demand template app
@@ -85,6 +78,7 @@ CalendarToTable:
 LOAD 
 	Date(MakeDate(Year(Today())-1) + RecNo() - 1,' YYYY-MM-DD') AS "End_Date"
 AutoGenerate Today() - MakeDate(Year(Today())-1) + RecNo() + 1;
+
 
 temp_custom:
 NoConcatenate

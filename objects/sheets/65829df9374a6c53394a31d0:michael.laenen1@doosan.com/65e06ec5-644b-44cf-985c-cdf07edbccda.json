@@ -5,10 +5,10 @@
       "qType": "sheet"
     },
     "qMetaDef": {
-      "title": "Locations",
+      "title": "Search by Location",
       "description": ""
     },
-    "rank": 1,
+    "rank": -2.5,
     "thumbnail": {
       "qStaticContentUrlDef": {}
     },
@@ -19,28 +19,28 @@
         "name": "DegkJA",
         "type": "map",
         "col": 0,
-        "row": 1,
+        "row": 3,
         "colspan": 24,
-        "rowspan": 11,
+        "rowspan": 9,
         "bounds": {
-          "y": 8.333333333333332,
+          "y": 25,
           "x": 0,
           "width": 100,
-          "height": 91.66666666666666
+          "height": 75
         }
       },
       {
-        "name": "pyHRA",
+        "name": "ZDBWM",
         "type": "filterpane",
         "col": 0,
         "row": 0,
-        "colspan": 12,
-        "rowspan": 1,
+        "colspan": 24,
+        "rowspan": 3,
         "bounds": {
           "y": 0,
           "x": 0,
-          "width": 50,
-          "height": 8.333333333333332
+          "width": 100,
+          "height": 25
         }
       }
     ],
@@ -55,11 +55,20 @@
       "mobileLayout": "LIST"
     },
     "gridMode": "edit",
-    "labelExpression": {
-      "qStringExpression": {
-        "qExpr": "='Equipement Locations ('&Date(Floor(Min(sample_ts)))& ' - '&Date(Floor(max(sample_ts))) &')'&' - ESN# ' &only(esn)"
+    "labelExpression": "",
+    "components": [
+      {
+        "key": "general",
+        "auto": false,
+        "bgColor": {
+          "color": {
+            "index": -1,
+            "color": "#595957",
+            "alpha": 1
+          }
+        }
       }
-    }
+    ]
   },
   "qChildren": [
     {
@@ -95,7 +104,7 @@
               "label": "",
               "type": ""
             },
-            "maxObjects": 10000,
+            "maxObjects": 5000,
             "showLayer": true,
             "hideCalcCond": false,
             "exclFromAutozoom": false,
@@ -124,7 +133,7 @@
               "altLabel": "Latest location",
               "byDimDef": {
                 "label": "Latest location",
-                "key": "kRBrEz",
+                "key": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
                 "type": "libraryItem"
               }
             },
@@ -211,13 +220,13 @@
                   "qAttributeExpressions": [],
                   "qAttributeDimensions": [
                     {
-                      "qLibraryId": "kRBrEz",
+                      "qLibraryId": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
                       "qSortBy": {
                         "qSortByAscii": 1,
                         "qExpression": {}
                       },
                       "id": "colorByAlternative",
-                      "colorMapRef": "kRBrEz"
+                      "colorMapRef": "00e57f47-c28f-4ab8-bb36-96f1fab5a791"
                     }
                   ],
                   "qCalcCondition": {
@@ -318,14 +327,14 @@
         ],
         "mapSettings": {
           "_layerType": "",
-          "baseMap": "satellite",
-          "projection": "satellite_mercator",
+          "baseMap": "default",
+          "projection": "default",
           "mapLanguage": "auto",
           "useImperialUnits": false,
           "selectionType": "lasso",
           "initialView": null,
           "showLegend": true,
-          "sidebarAlignment": "left",
+          "sidebarAlignment": "auto",
           "showFindLocationButton": false,
           "showScaleBar": true,
           "zoomLimitSwitch": false,
@@ -353,7 +362,7 @@
         "gaVersion": 2,
         "layers": [],
         "qUndoExclude": {
-          "hashCode": -1575019751,
+          "hashCode": 575019548,
           "gaLayers": [
             {
               "qHyperCubeDef": {
@@ -407,13 +416,13 @@
                     ],
                     "qAttributeDimensions": [
                       {
-                        "qLibraryId": "kRBrEz",
+                        "qLibraryId": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
                         "qSortBy": {
                           "qSortByAscii": 1,
                           "qExpression": {}
                         },
                         "id": "colorByAlternative",
-                        "colorMapRef": "kRBrEz"
+                        "colorMapRef": "00e57f47-c28f-4ab8-bb36-96f1fab5a791"
                       }
                     ],
                     "qCalcCondition": {
@@ -496,7 +505,7 @@
                 "altLabel": "Latest location",
                 "byDimDef": {
                   "label": "Latest location",
-                  "key": "kRBrEz",
+                  "key": "00e57f47-c28f-4ab8-bb36-96f1fab5a791",
                   "type": "libraryItem"
                 }
               }
@@ -505,7 +514,19 @@
         },
         "components": [
           {
-            "key": "general"
+            "key": "general",
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "14px"
+              },
+              "subTitle": {
+                "fontFamily": "Roboto, sans-serif"
+              },
+              "footer": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
           }
         ]
       },
@@ -514,7 +535,7 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "pyHRA",
+          "qId": "ZDBWM",
           "qType": "filterpane"
         },
         "qMetaDef": {},
@@ -529,13 +550,48 @@
         "version": "0.17.4",
         "qChildListDef": {
           "qData": {}
-        }
+        },
+        "components": [
+          {
+            "key": "general",
+            "title": {
+              "main": {
+                "fontFamily": "Roboto, sans-serif",
+                "fontSize": "14px",
+                "color": {
+                  "index": 15,
+                  "color": "#ffffff",
+                  "alpha": 1
+                },
+                "fontStyle": []
+              },
+              "subTitle": {
+                "fontFamily": "Roboto, sans-serif"
+              },
+              "footer": {
+                "fontFamily": "Roboto, sans-serif"
+              }
+            }
+          },
+          {
+            "key": "theme",
+            "header": {
+              "fontFamily": "Roboto, sans-serif"
+            },
+            "content": {
+              "fontFamily": "Roboto, sans-serif"
+            }
+          },
+          {
+            "key": "selections"
+          }
+        ]
       },
       "qChildren": [
         {
           "qProperty": {
             "qInfo": {
-              "qId": "nHUuZvU",
+              "qId": "91b69439-fd4a-4ee7-8122-e33c47b4a1ed",
               "qType": "listbox"
             },
             "qMetaDef": {},
@@ -543,11 +599,224 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "start_ts"
+                  "data_partition"
                 ],
                 "qFieldLabels": [
-                  "start_ts"
+                  ""
                 ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "xBQjmQJ"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Data Partition",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "878ef0ad-4aae-4cf5-a660-9bbabb94ee34",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "subscription_status"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "fGyDuq"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Subscription Status",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "45e10a74-e3b8-4cfd-96f7-fde8e952aaa6",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "inventory_type"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "SuErSa"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Inventory Type",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "af7b4cbc-c049-4652-b542-b2fb22b57b65",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "product_category"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "XKdWga"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Product Category",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "XLJdKpz",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qLibraryId": "QxjDm",
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [],
+                "qFieldLabels": [],
                 "qSortCriterias": [
                   {
                     "qSortByState": 1,
@@ -566,7 +835,169 @@
               "qInitialDataFetch": [],
               "qExpressions": []
             },
-            "title": "start_ts",
+            "title": "Product Model",
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "f37e0aca-d0ff-4f4e-a492-ab9eea4c8405",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "cellular_carrier"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "XVruYmY"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Cellular Carrier",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "c0dd15fe-859d-4a8f-bf97-fbe74c0ded6d",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "country"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "pQErabQ"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Country",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "4780f7f4-124b-4367-8d1d-e33e1296084b",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "region"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "arNrTHs"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "showTitles": true,
+              "title": "",
+              "subtitle": "",
+              "footnote": "",
+              "disableNavMenu": false,
+              "showDetails": true,
+              "showDetailsExpression": false,
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Region / State",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": true,
+            "showDetailsExpression": false,
             "visualization": "listbox"
           },
           "qChildren": []

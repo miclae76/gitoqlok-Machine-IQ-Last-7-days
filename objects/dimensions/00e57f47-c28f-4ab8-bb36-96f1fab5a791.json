@@ -13,7 +13,7 @@
     ],
     "title": "Service Status",
     "coloring": {
-      "changeHash": "0.2892882627393496",
+      "changeHash": "0.843369265738948",
       "hasValueColors": true,
       "colorMapRef": "00e57f47-c28f-4ab8-bb36-96f1fab5a791"
     }
@@ -64,14 +64,14 @@
         {
           "value": "NO_SERVICE_DUE",
           "baseColor": {
-            "color": "#6da06f",
-            "index": -1
+            "color": "#70ba6e",
+            "index": 9
           }
         },
         {
           "value": "SERVICE_DUE",
           "baseColor": {
-            "color": "#c13525",
+            "color": "#ff4631",
             "index": -1
           }
         },
@@ -86,7 +86,7 @@
           "value": "UNKNOWN",
           "baseColor": {
             "color": "#b0afae",
-            "index": 13
+            "index": 1
           }
         }
       ],

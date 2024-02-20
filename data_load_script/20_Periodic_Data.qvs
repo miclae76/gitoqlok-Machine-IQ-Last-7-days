@@ -40,5 +40,6 @@ SELECT
 	"cumulative_fuel_consumption",
 	"cumulative_engine_hours",
 	"def_level"
-FROM iotv3."iot_events"
-WHERE "sample_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;
+FROM iotv3."iot_events_latest"
+;
+//WHERE "sample_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;

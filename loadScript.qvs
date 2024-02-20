@@ -181,8 +181,9 @@ SELECT
 	"cumulative_fuel_consumption",
 	"cumulative_engine_hours",
 	"def_level"
-FROM iotv3."iot_events"
-WHERE "sample_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;
+FROM iotv3."iot_events_latest"
+;
+//WHERE "sample_ts" > CURRENT_DATE - INTERVAL '7 DAY' ;
 
 
 
@@ -237,33 +238,6 @@ SELECT
 	created as fault_created
 FROM iotv3."iot_fault_sessions"
 WHERE status = 'ACTIVE';
-///$tab 60_Utilization
-TRACE *** iot_engine_hours_aggregation on last 7 days ***;
-
-[iot_engine_hours_aggregation]:
-LOAD 
-	*,
-	if(extract_hours <= 6,  '00:00 - 00:06', 
-    	if(extract_hours > 6 and extract_hours <= 12, '00:06 - 12:00',
-        	if(extract_hours > 12 and extract_hours <= 18, '12:00 - 18:00',
-    '18:00 - 24:00')))     AS aggregate_ts_hour_bin
-WHERE aggregate_ts >= (last_aggregate_ts - 7);
-LOAD
- *,
- date(floor(aggregate_ts)) AS aggregate_ts_day,
- hour("aggregate_ts") AS extract_hours
-;
-SELECT 
-    "asset_id",
-	"aggregate_ts",
-	"engine_hours",
-	"invalid_data_detected",
-	"cumulative_engine_hours_final",
-    max("aggregate_ts") over (partition by "asset_id") as last_aggregate_ts
-FROM iotv3."iot_engine_hours_aggregation"
-WHERE "aggregate_ts" > CURRENT_DATE - INTERVAL '30 DAY' ;
-
-
 ///$tab 980_Design_Tables
 TRACE *** Create static tables ***;
 
@@ -283,14 +257,7 @@ FULL
 TimeZoneTable:
 LOAD * INLINE [
 TimeZone
-CET
-CST
-EET
-EST
-MST
-PST
 UTC
-WET
 ];
 
 //Static table to select historical data for on-demand template app
@@ -352,6 +319,7 @@ LOAD
 	Date(MakeDate(Year(Today())-1) + RecNo() - 1,' YYYY-MM-DD') AS "End_Date"
 AutoGenerate Today() - MakeDate(Year(Today())-1) + RecNo() + 1;
 
+
 temp_custom:
 NoConcatenate
 LOAD *
@@ -392,6 +360,32 @@ Search Include
     fault_name
 ;
 
-tag fields TimeScope, TimeZone/*, dataset*/ with '$hidden';
+tag fields TimeScope, TimeZone, dataset with '$hidden';
 ///$tab 999_EXIT
 EXIT SCRIPT;
+///$tab 60_Utilization
+TRACE *** iot_engine_hours_aggregation on last 7 days ***;
+
+[iot_engine_hours_aggregation]:
+LOAD 
+	*,
+	if(extract_hours <= 6,  '00:00 - 00:06', 
+    	if(extract_hours > 6 and extract_hours <= 12, '00:06 - 12:00',
+        	if(extract_hours > 12 and extract_hours <= 18, '12:00 - 18:00',
+    '18:00 - 24:00')))     AS aggregate_ts_hour_bin
+WHERE aggregate_ts >= (last_aggregate_ts - 7);
+LOAD
+ *,
+ date(floor(aggregate_ts)) AS aggregate_ts_day,
+ hour("aggregate_ts") AS extract_hours
+;
+SELECT 
+    "asset_id",
+	"aggregate_ts",
+	"engine_hours",
+	"invalid_data_detected",
+	"cumulative_engine_hours_final",
+    max("aggregate_ts") over (partition by "asset_id") as last_aggregate_ts
+FROM iotv3."iot_engine_hours_aggregation"
+WHERE "aggregate_ts" > CURRENT_DATE - INTERVAL '30 DAY' ;
+

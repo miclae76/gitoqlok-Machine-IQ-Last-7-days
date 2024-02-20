@@ -13,7 +13,7 @@
     ],
     "title": "Health Status",
     "coloring": {
-      "changeHash": "0.014397779946088818",
+      "changeHash": "0.44640979892201726",
       "hasValueColors": true,
       "colorMapRef": "kRBrEz"
     }
@@ -50,22 +50,22 @@
         {
           "value": "IMMEDIATE_ACTION_REQUIRED",
           "baseColor": {
-            "color": "#c13525",
+            "color": "#ff4631",
             "index": -1
           }
         },
         {
           "value": "NO_IMMEDIATE_ACTION_REQUIRED",
           "baseColor": {
-            "color": "#6da06f",
-            "index": -1
+            "color": "#70ba6e",
+            "index": 9
           }
         },
         {
           "value": "-",
           "baseColor": {
             "color": "#b0afae",
-            "index": 13
+            "index": 1
           }
         }
       ],

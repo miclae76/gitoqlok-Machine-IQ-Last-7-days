@@ -14,14 +14,59 @@
     "qLabelExpression": "='Severity'",
     "title": "Fault Severity",
     "coloring": {
-      "colorMapRef": "pVmPFWB",
-      "changeHash": "0.7686328158991504",
-      "hasValueColors": false
+      "colorMapRef": "6bb1abe7-0874-496d-9ab4-000d312c1fb5",
+      "changeHash": "0.615953900416836",
+      "hasValueColors": true
     }
   },
   "qMetaDef": {
     "title": "Fault Severity",
     "description": "",
     "tags": []
+  },
+  "_ColorMapModel": {
+    "qInfo": {
+      "qId": "ColorMapModel_6bb1abe7-0874-496d-9ab4-000d312c1fb5",
+      "qType": "ColorMap"
+    },
+    "qMeta": {},
+    "colorMap": {
+      "colors": [
+        {
+          "value": "CRITICAL",
+          "baseColor": {
+            "color": "#FF4631",
+            "index": -1
+          }
+        },
+        {
+          "value": "WARNING",
+          "baseColor": {
+            "color": "#FFBB43",
+            "index": -1
+          }
+        },
+        {
+          "value": "UNKNOWN",
+          "baseColor": {
+            "color": "#595957",
+            "index": -1
+          }
+        },
+        {
+          "value": "INFORMATION",
+          "baseColor": {
+            "color": "#26a0a7",
+            "index": 12
+          }
+        }
+      ],
+      "nul": null,
+      "oth": null,
+      "pal": null,
+      "single": null,
+      "usePal": true,
+      "autoFill": true
+    }
   }
 }
