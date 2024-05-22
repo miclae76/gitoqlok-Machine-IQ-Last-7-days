@@ -1,11 +1,40 @@
 [
   {
+    "qName": "Account Name",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "Category",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "Channel",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
     "qName": "End_Date",
     "qTags": [
-      "$key",
       "$numeric",
-      "$integer",
       "$timestamp",
+      "$integer",
+      "$key",
       "$date"
     ],
     "qSrcTables": [
@@ -14,12 +43,22 @@
     ]
   },
   {
+    "qName": "Package",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
     "qName": "Start_Date",
     "qTags": [
-      "$key",
       "$numeric",
-      "$integer",
       "$timestamp",
+      "$integer",
+      "$key",
       "$date"
     ],
     "qSrcTables": [
@@ -52,6 +91,46 @@
     ]
   },
   {
+    "qName": "accountbilltoid",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "accountid",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "accountnumber",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "amendmenttype",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
     "qName": "asset_id",
     "qTags": [
       "$key"
@@ -62,7 +141,18 @@
       "iot_equipment_status",
       "iot_events",
       "iot_debounced_location_sessions",
-      "iot_fault_sessions"
+      "iot_fault_sessions",
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "autorenew",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
     ]
   },
   {
@@ -124,6 +214,16 @@
     ]
   },
   {
+    "qName": "currentterm",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
     "qName": "customer_account_id",
     "qTags": [
       "$ascii",
@@ -131,6 +231,16 @@
     ],
     "qSrcTables": [
       "iot_equipment"
+    ]
+  },
+  {
+    "qName": "customeracctnumber__c",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
     ]
   },
   {
@@ -513,6 +623,16 @@
     ]
   },
   {
+    "qName": "productid",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
     "qName": "region",
     "qTags": [
       "$text"
@@ -534,7 +654,8 @@
   {
     "qName": "sample_ts",
     "qTags": [
-      "$numeric"
+      "$numeric",
+      "$timestamp"
     ],
     "qSrcTables": [
       "iot_events"
@@ -580,8 +701,7 @@
   {
     "qName": "start_ts",
     "qTags": [
-      "$numeric",
-      "$timestamp"
+      "$numeric"
     ],
     "qSrcTables": [
       "iot_debounced_location_sessions"
@@ -607,6 +727,16 @@
     ]
   },
   {
+    "qName": "subscription_id",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
     "qName": "subscription_status",
     "qTags": [
       "$ascii",
@@ -614,6 +744,76 @@
     ],
     "qSrcTables": [
       "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "subscription_version",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "subscriptioncreateddate",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "subscriptionenddate",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "subscriptionnumber",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "subscriptionproducttype__c",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "subscriptionstartdate",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
+    ]
+  },
+  {
+    "qName": "subscriptionupdateddate",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
     ]
   },
   {
@@ -634,6 +834,16 @@
     ],
     "qSrcTables": [
       "Devise_Association_History"
+    ]
+  },
+  {
+    "qName": "zuora_subscription_status",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "zuora_subscriptions"
     ]
   }
 ]

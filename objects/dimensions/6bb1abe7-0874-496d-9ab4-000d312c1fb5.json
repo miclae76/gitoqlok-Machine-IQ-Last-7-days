@@ -29,7 +29,16 @@
       "qId": "ColorMapModel_6bb1abe7-0874-496d-9ab4-000d312c1fb5",
       "qType": "ColorMap"
     },
-    "qMeta": {},
+    "qMeta": {
+      "_resourcetype": "app.object",
+      "_objecttype": "ColorMap",
+      "id": "ColorMapModel_6bb1abe7-0874-496d-9ab4-000d312c1fb5",
+      "approved": false,
+      "published": false,
+      "ownerId": "65829df9374a6c53394a31d0",
+      "createdDate": "2024-02-20T16:28:24.329Z",
+      "modifiedDate": "2024-02-20T16:28:24.329Z"
+    },
     "colorMap": {
       "colors": [
         {

@@ -1,11 +1,16 @@
 {
   "qTitle": "Machine IQ - Equipment Selection",
-  "qThumbnail": {},
+  "qThumbnail": {
+    "qUrl": "/api/v1/apps/f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec/media/files/MIQ_Equipment_Selection.png"
+  },
   "qUsage": "ANALYTICS",
+  "description": "This application allows a user to search and select for an equipment and request the generation of the MIQ dashboard for the selected asset. (Qlik ODAG)",
+  "dynamicColor": "hsla(207,18%,43%,1)",
   "encrypted": true,
   "id": "f3c2d4e8-064e-44d7-b4ff-5d7e746f66ec",
   "published": false,
   "owner": "00uwaekttlMwr43ua1t7",
   "ownerId": "65829df9374a6c53394a31d0",
+  "spaceId": "65b936eca3277ef99555cc7a",
   "_resourcetype": "app"
 }

@@ -1,0 +1,52 @@
+///$tab 60_Zuora_Subscriptions
+LIB CONNECT TO 'Common DATA:Machine IQ Athena';
+
+LOAD subscriptionnumber, 
+	package__c AS Package, 
+	channel__c AS Channel, 
+	version as subscription_version, 
+	productid, 
+	category__c AS Category, 
+	id as subscription_id, 
+	subscriptionstartdate, 
+	autorenew, 
+	customeracctnumber__c, 
+	status as zuora_subscription_status, 
+	serialnumber__c AS asset_id, 
+	subscriptionenddate, 
+	currentterm, 
+	accountid, 
+	accountname as "Account Name", 
+	accountbilltoid, 
+	accountnumber, 
+	amendmenttype, 
+	subscriptionupdateddate, 
+	subscriptioncreateddate, 
+	subscriptionproducttype__c;
+
+[zuora_subscriptions]:
+SELECT subscriptionnumber,
+	"package__c",
+	"channel__c",
+	version,
+	productid,
+	"category__c",
+	id,
+	subscriptionstartdate,
+	autorenew,
+	"customeracctnumber__c",
+	status,
+	"serialnumber__c",
+	subscriptionenddate,
+	currentterm,
+	accountid,
+	accountname,
+	accountbilltoid,
+	accountnumber,
+	amendmenttype,
+	subscriptionupdateddate,
+	subscriptioncreateddate,
+	"subscriptionproducttype__c"
+FROM AwsDataCatalog.miq."zuora_subscriptions";
+
+STORE zuora_subscriptions INTO [lib://Common DATA:DataFiles/zuora_subscriptions.qvd](qvd);

@@ -21,7 +21,14 @@ Search Include
     device_type,
     part_number,
     fault_code_id,
-    fault_name
+    fault_name,
+    imei,
+    imsi,
+    iccid,
+    "Account Name",
+    Package,
+    Channel,
+    Category
 ;
 
 tag fields TimeScope, TimeZone, dataset with '$hidden';

@@ -238,6 +238,63 @@ SELECT
 	created as fault_created
 FROM iotv3."iot_fault_sessions"
 WHERE status = 'ACTIVE';
+
+
+///$tab 60_Zuora_Subscriptions
+LIB CONNECT TO 'Common DATA:Machine IQ Athena';
+
+LOAD subscriptionnumber, 
+	package__c AS Package, 
+	channel__c AS Channel, 
+	version as subscription_version, 
+	productid, 
+	category__c AS Category, 
+	id as subscription_id, 
+	subscriptionstartdate, 
+	autorenew, 
+	customeracctnumber__c, 
+	status as zuora_subscription_status, 
+	serialnumber__c AS asset_id, 
+	subscriptionenddate, 
+	currentterm, 
+	accountid, 
+	accountname as "Account Name", 
+	accountbilltoid, 
+	accountnumber, 
+	amendmenttype, 
+	subscriptionupdateddate, 
+	subscriptioncreateddate, 
+	subscriptionproducttype__c;
+
+[zuora_subscriptions]:
+SELECT subscriptionnumber,
+	"package__c",
+	"channel__c",
+	version,
+	productid,
+	"category__c",
+	id,
+	subscriptionstartdate,
+	autorenew,
+	"customeracctnumber__c",
+	status,
+	"serialnumber__c",
+	subscriptionenddate,
+	currentterm,
+	accountid,
+	accountname,
+	accountbilltoid,
+	accountnumber,
+	amendmenttype,
+	subscriptionupdateddate,
+	subscriptioncreateddate,
+	"subscriptionproducttype__c"
+FROM AwsDataCatalog.miq."zuora_subscriptions";
+
+STORE zuora_subscriptions INTO [lib://Common DATA:DataFiles/zuora_subscriptions.qvd](qvd);
+
+
+
 ///$tab 980_Design_Tables
 TRACE *** Create static tables ***;
 
@@ -357,35 +414,16 @@ Search Include
     device_type,
     part_number,
     fault_code_id,
-    fault_name
+    fault_name,
+    imei,
+    imsi,
+    iccid,
+    "Account Name",
+    Package,
+    Channel,
+    Category
 ;
 
 tag fields TimeScope, TimeZone, dataset with '$hidden';
 ///$tab 999_EXIT
 EXIT SCRIPT;
-///$tab 60_Utilization
-TRACE *** iot_engine_hours_aggregation on last 7 days ***;
-
-[iot_engine_hours_aggregation]:
-LOAD 
-	*,
-	if(extract_hours <= 6,  '00:00 - 00:06', 
-    	if(extract_hours > 6 and extract_hours <= 12, '00:06 - 12:00',
-        	if(extract_hours > 12 and extract_hours <= 18, '12:00 - 18:00',
-    '18:00 - 24:00')))     AS aggregate_ts_hour_bin
-WHERE aggregate_ts >= (last_aggregate_ts - 7);
-LOAD
- *,
- date(floor(aggregate_ts)) AS aggregate_ts_day,
- hour("aggregate_ts") AS extract_hours
-;
-SELECT 
-    "asset_id",
-	"aggregate_ts",
-	"engine_hours",
-	"invalid_data_detected",
-	"cumulative_engine_hours_final",
-    max("aggregate_ts") over (partition by "asset_id") as last_aggregate_ts
-FROM iotv3."iot_engine_hours_aggregation"
-WHERE "aggregate_ts" > CURRENT_DATE - INTERVAL '30 DAY' ;
-
