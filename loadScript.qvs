@@ -244,11 +244,11 @@ WHERE status = 'ACTIVE';
 LIB CONNECT TO 'Common DATA:Machine IQ Athena';
 
 LOAD subscriptionnumber, 
-	package__c AS Package, 
-	channel__c AS Channel, 
+	package__c, 
+	channel__c, 
 	version as subscription_version, 
 	productid, 
-	category__c AS Category, 
+	category__c, 
 	id as subscription_id, 
 	subscriptionstartdate, 
 	autorenew, 
@@ -258,7 +258,7 @@ LOAD subscriptionnumber,
 	subscriptionenddate, 
 	currentterm, 
 	accountid, 
-	accountname as "Account Name", 
+	accountname, 
 	accountbilltoid, 
 	accountnumber, 
 	amendmenttype, 
@@ -396,6 +396,11 @@ drop Table temp_custom;
 ///$tab 990_Search
 TRACE *** Setup Field list to include in Search ***;
 
+rename field package__c to Package;
+rename field channel_c to Channel;
+rename field category__c to Category;
+rename field accountname to "AccountName";
+
 Search Include
 	asset_id,
     esn,
@@ -420,7 +425,7 @@ Search Include
     imei,
     imsi,
     iccid,
-    "Account Name",
+    "AccountName",
     Package,
     Channel,
     Category
