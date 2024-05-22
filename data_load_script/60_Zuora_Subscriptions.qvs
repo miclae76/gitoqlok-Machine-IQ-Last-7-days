@@ -49,4 +49,4 @@ SELECT subscriptionnumber,
 	"subscriptionproducttype__c"
 FROM AwsDataCatalog.miq."zuora_subscriptions";
 
-STORE zuora_subscriptions INTO [lib://Common DATA:DataFiles/zuora_subscriptions.qvd](qvd);
+STORE zuora_subscriptions INTO [lib://:DataFiles/zuora_subscriptions.qvd](qvd);
